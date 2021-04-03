@@ -22,7 +22,7 @@ onload = function() {
     }
     if (opacity >= 0) {
       element.style.opacity = opacity;
-      element.style.transform = `translateY(${(1 - opacity) * 200}px)`
+      if (screen.width > 768) element.style.transform = `translateY(${(1 - opacity) * 200}px)`
     }
   });
 }
