@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="LegendCow">
+  <meta name="description" content="The best Discord fishing experience">
+  <meta name="keywords" content="bigtuna, big tuna, big, tuna, discord, discord bot, bot, fishing, discord fishing, fishing bot, tuna bot, discord fishing bot">
+  <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+
+  <title>Big Tuna - The best Discord fishing experience</title>
+
+  <link rel="stylesheet" href="../css/main.css">
+  <script>
+    const fishCaught = <%= fish %>;
+    const tonsCaught = <%= weight %>;
+  </script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="../js/countup.js"></script>
+  <script src="../js/main.js"></script>
+</head>
+<body>
+  <div id="cover"></div>
+
+  <a href="https://top.gg/bot/803361191166607370" target="_blank"><img id="logo" src="../images/logo.png"></a>
+  <div id="top">
+    <div class="main">
+      <h1 id="title">BIG TUNA</h1>
+      <h2 id="subtitle">The best Discord fishing experience</h2>
+      <a id="inviteButton" href="https://discord.com/api/oauth2/authorize?client_id=803361191166607370&permissions=59456&scope=bot" target="_blank">ADD TO DISCORD</a>
+    </div>
+    <div class="stats">
+      <div class="left">
+        <p id="fishCaught" class="statValue"></p>
+        <p class="statTitle">fish caught</p>
+      </div>
+      <div class="right">
+        <p id="tonsCaught" class="statValue"></p>
+        <p class="statTitle">tons caught</p>
+      </div>
+    </div>
+    <div id="scroll"><img id="scrollImg" src="../images/scroll.png" draggable="false"></div>
+  </div>
+
+  <div class="description">
+    <div class="row">
+      <div class="leftColumn center">
+        <div class="desc one">
+          <h1>The Fishing Experience</h1>
+          <p>Randomly generated fish spawns, in high resolution. Reel in your line and see what you catch!</p>
+        </div>
+      </div>
+      <div class="rightColumn">
+        <img src="../images/fishing.png">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="leftColumn">
+        <img src="../images/fishinfo.png">
+      </div>
+      <div class="rightColumn center">
+        <div class="desc two">
+          <h1>The Fish</h1>
+          <p>60+ fish, spread out over many unlockable locations.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="leftColumn center">
+        <div class="desc three">
+          <h1>Your Aquarium</h1>
+          <p>Keep and showcase your biggest catches. You'll also earn coins based on how good they are.</p>
+        </div>
+      </div>
+      <div class="rightColumn">
+        <img id="aquariumImg" src="../images/aquarium.png">
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="leftColumn">
+        <img src="../images/equipment.png">
+      </div>
+      <div class="rightColumn center">
+        <div class="desc four">
+          <h1>Your Equipment</h1>
+          <p>Use coins to buy equipment and prepare yourself for bigger catches.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer">
+      <div class="footerColumn">
+        <div class="columnText">
+          <h3 class="footerTitle">Official Server</h3>
+          <p>Get support</p>
+          <p>Learn to fish</p>
+          <p>Explore the community</p>
+          <p><a href="https://discord.gg/RaN2VE9zpa" target="_blank">Join now</a></p>
+        </div>
+      </div>
+      <div class="footerColumn">
+        <div class="columnText">
+          <h3 class="footerTitle">Useful Links</h3>
+          <p><a href="https://top.gg/bot/803361191166607370" target="_blank">Bot page</a></p>
+          <p><a href="https://discord.com/api/oauth2/authorize?client_id=803361191166607370&permissions=59456&scope=bot" target="_blank">Invite now</a></p>
+        </div>
+      </div>
+      <div class="footerColumn">
+        <div class="columnText">
+          <h3 class="footerTitle">Contact</h3>
+          <p id="email">discordbigtuna@gmail.com</p>
+          <p id="discord">Huntail777#4311</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var config = {
+      distance: '100%',
+      origin: 'left',
+      duration: 1000,
+      opacity: 0,
+      scale: 0.5,
+      mobile: false
+    };
+    ScrollReveal().reveal('.leftColumn', config);
+    config.origin = 'right';
+    ScrollReveal().reveal('.rightColumn', config);
+  </script>
+</body>
+</html>
