@@ -26,11 +26,11 @@ app.get('/', (req, res) => {
     res.render('main.ejs', {fish: stats.fishCaught, weight: stats.tonsCaught});
 });
 
-let httpServer = http.createServer(app);
+//let httpServer = http.createServer(app);
 let httpsServer = https.createServer(credentials, app);
 
-httpServer.listen(config.HTTP_PORT);
-console.log(`Listening: http on port ${config.HTTP_PORT}`);    
+//httpServer.listen(config.HTTP_PORT);
+//console.log(`Listening: http on port ${config.HTTP_PORT}`);    
 
 
 httpsServer.listen(config.HTTPS_PORT);
