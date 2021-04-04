@@ -4,10 +4,10 @@ const config = require('./private/config.json');
 const fs = require('fs');
 const http = require('http');
 const https = require('https');
-//let privateKey  = fs.readFileSync('/etc/letsencrypt/live/bigtuna.xyz/privkey.pem', 'utf8');
-//let certificate = fs.readFileSync('/etc/letsencrypt/live/bigtuna.xyz/cert.pem', 'utf8');
+let privateKey  = fs.readFileSync('/etc/letsencrypt/live/bigtuna.xyz/privkey.pem', 'utf8');
+let certificate = fs.readFileSync('/etc/letsencrypt/live/bigtuna.xyz/cert.pem', 'utf8');
 
-//let credentials = {key: privateKey, cert: certificate};
+let credentials = {key: privateKey, cert: certificate};
 const express = require('express');
 const app = express();
 
@@ -21,11 +21,11 @@ app.get('/', (req, res) => {
 });
 
 let httpServer = http.createServer(app);
-//let httpsServer = https.createServer(credentials, app);
+let httpsServer = https.createServer(credentials, app);
 
 httpServer.listen(config.HTTP_PORT);
 console.log(`Listening: http on port ${config.HTTP_PORT}`);    
 
 
-//httpsServer.listen(config.HTTPS_PORT);
-//console.log(`Listening: https on port ${config.HTTPS_PORT}`);
+httpsServer.listen(config.HTTPS_PORT);
+console.log(`Listening: https on port ${config.HTTPS_PORT}`);
