@@ -335,7 +335,7 @@ body {
   #aquariumImg { width: 90%; }
   .desc { margin-top: 340px;}
   .desc h1 { font-size: 5vw; margin-bottom: 4px; }
-  .desc p { font-size: 3vw; }
+  .desc p { font-size: 3.5vw; }
   .row { padding: 128px 0; }
   .leftColumn, .rightColumn {
     width: 100%;
@@ -362,9 +362,9 @@ body {
 
 @media only screen and (max-width: 420px) {
   .row { padding: 80px 0; }
-  .one { transform: translateY(-4px); }
-  .two { transform: translateY(-16px); }
-  .three { transform: translateY(-46px); }
-  .four { transform: translateY(20px); }
+  .one { transform: translateY(-2px); }
+  .two { transform: translateY(-14px); }
+  .three { transform: translateY(-44px); }
+  .four { transform: translateY(22px); }
   #footer { margin-top: 64px; }
 }

@@ -5,6 +5,18 @@ const easingFn = function (t, b, c, d) {
 }
 
 onload = function() {
+  var config = {
+    distance: '100%',
+    origin: 'left',
+    duration: 1000,
+    opacity: 0,
+    scale: 0.5,
+    mobile: false
+  };
+  ScrollReveal().reveal('.leftColumn', config);
+  config.origin = 'right';
+  ScrollReveal().reveal('.rightColumn', config);
+
   document.getElementById('cover').remove();
   let count1 = new CountUp('fishCaught', 0, fishCaught, 0, 2, { easingFn, separator: '' }); // add suffix: 'k' if it gets too big
   let count2 = new CountUp('tonsCaught', 0, tonsCaught, 3, 2, { easingFn });
