@@ -4,8 +4,8 @@ const config = require('./private/config.json');
 const fs = require('fs');
 const http = require('http');
 const https = require('https');
-let privateKey  = fs.readFileSync('./private/privkey.pem', 'utf8');
-let certificate = fs.readFileSync('./private/cert.pem', 'utf8');
+let privateKey  = fs.readFileSync('./private/ssl/privkey.pem', 'utf8');
+let certificate = fs.readFileSync('./private/ssl/cert.pem', 'utf8');
 
 let credentials = {key: privateKey, cert: certificate};
 const express = require('express');
