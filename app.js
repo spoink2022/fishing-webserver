@@ -14,6 +14,12 @@ const app = express();
 app.set('view engine', 'ejs');
 app.use(express.static('public'))
 
+app.use(function(req, res, next) {
+    if(!req.secure) {
+      return res.redirect(['https://', req.get('Host'), req.url].join(''));
+    }
+    next();
+});
 
 app.get('/', (req, res) => {
     const stats = Global.getStats();
