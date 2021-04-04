@@ -1,6 +1,13 @@
 const Global = require('./global.js');
 const config = require('./private/config.json');
 
+const fs = require('fs');
+const http = require('http');
+const https = require('https');
+let privateKey  = fs.readFileSync('./private/privkey.pem', 'utf8');
+let certificate = fs.readFileSync('./private/cert.pem', 'utf8');
+
+let credentials = {key: privateKey, cert: certificate};
 const express = require('express');
 const app = express();
 
@@ -13,6 +20,12 @@ app.get('/', (req, res) => {
     res.render('main.ejs', {fish: stats.fishCaught, weight: stats.tonsCaught});
 });
 
-const server = app.listen(config.PORT, () => {
-    console.log(`Listening on port ${config.PORT}`);
-});
+let httpServer = http.createServer(app);
+let httpsServer = https.createServer(credentials, app);
+
+httpServer.listen(config.HTTP_PORT);
+console.log(`Listening: http on port ${config.HTTP_PORT}`);    
+
+
+httpsServer.listen(config.HTTPS_PORT);
+console.log(`Listening: https on port ${config.HTTPS_PORT}`);
