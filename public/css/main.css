@@ -20,7 +20,6 @@ body {
 #cover { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 2; background: #20202A; }
 
 #logo {
-  width: 64px;
   position: fixed;
   top: 32px;
   left: 32px;
@@ -114,7 +113,6 @@ body {
 }
 
 #scrollImg {
-  width: 96px;
   animation-name: scroll;
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
@@ -140,12 +138,10 @@ body {
 
 .description img, .desc {
   border-radius: 8px;
-  width: 86%;
   margin-left: 7%;
 }
 
 #aquariumImg {
-  width: 100%;
   margin-left: 0;
 }
 
