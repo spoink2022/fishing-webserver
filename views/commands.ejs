@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="LegendCow">
+  <meta name="description" content="An updated collection of commands for the Big Tuna Discord fishing bot">
+  <meta name="keywords" content="commands, command, information, help, bigtuna, big tuna, discord, discord bot, fishing, discord fishing, fishing bot">
+  <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+
+  <title>Big Tuna - Commands</title>
+
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/commands.css">
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DDRVK2WS87"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-DDRVK2WS87');
+  </script>
+
+  <script src="../js/commands.js"></script>
+</head>
+<body>
+  <div id="cover"></div>
+
+  <navbar>
+    <a href="/">Home</a>
+    <a href="/commands" class="selected-link">Commands</a>
+  </navbar>
+  
+  <div id="main">
+    <h1 id="title">COMMANDS</h1>
+    <p id="subtitle">An updated collection of commands for the Big Tuna Discord fishing bot</p>
+    
+    <div id="type-selector">
+      <p class="selected">gameplay</p>
+      <p>statistics</p>
+      <p>information</p>
+    </div>
+
+    <div class="category visible" id="gameplay">
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">fish</p>
+          <p class="description">Cast your line and see what you catch!</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.fish &ltbait (optional)&gt</p>
+          <p class="bottom-italics">.fish</p>
+          <p class="bottom-italics">.fish worms</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>React with the hook icon or wait 10 seconds to see your catch</li>
+            <li>The fish you catch will be near your hook</li>
+            <li>Also accepts <span class="command-highlight">.f</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">aquarium</p>
+          <p class="description">View and collect coins from your collection of fish</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.aquarium &ltnumber (optional)&gt</p>
+          <p class="bottom-italics">.aquarium</p>
+          <p class="bottom-italics">.aquarium 2</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>React with the coin icon to collect your coins</li>
+            <li>The number you choose defaults to your current location if a value is not provided</li>
+            <li>Also accepts <span class="command-highlight">.a</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">collect</p>
+          <p class="description">Conveniently collects the coins from your aquariums</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.collect</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>Also accepts <span class="command-highlight">.c</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">shop</p>
+          <p class="description">Presents the shop page, where you can upgrade your stuff</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.shop</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>A lock icon means you are not a high enough level to buy an item</li>
+            <li>A credit card icon means you don’t have enough coins to buy an item</li>
+            <li>A number icon represents the number you must react with to buy an item</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">setlocation</p>
+          <p class="description">Sets your fishing location</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.setlocation &ltnumber&gt</p>
+          <p class="bottom-italics">.setlocation 1</p>
+          <p class="bottom-italics">.setlocation 3</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>This command is not needed until you reach level 10, when you unlock the second location</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">quest</p>
+          <p class="description">Opens your quest page</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.quest</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>You can renew your quest after it is 3 days old</li>
+            <li>This command is not needed until you reach level 10, when you unlock quests</li>
+            <li>Also accepts <span class="command-highlight">.q</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">baitshop</p>
+          <p class="description">Presents the bait shop page, where you can buy baits</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.baitshop</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>The bait shop refreshes every 24 hours, at 12am UTC time</li>
+            <li>Also accepts <span class="command-highlight">.bs</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">baits</p>
+          <p class="description">Displays the baits in your inventory</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.baits</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>Also accepts <span class="command-highlight">.b</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="category" id="statistics">
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">stats</p>
+          <p class="description">Shows your personal stats</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.stats</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>Also accepts <span class="command-highlight">.s</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">serverstats</p>
+          <p class="description">Shows stats about the server it was called from</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.serverstats</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>Global ranking is based on total weight caught</li>
+            <li>Also accepts <span class="command-highlight">.ss</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">equipment</p>
+          <p class="description">Displays your fishing equipment and its capabilities</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.equipment</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>Includes your rod, line, and hook</li>
+            <li>The overall max weight is that of the weakest of your components</li>
+            <li>Also accepts <span class="command-highlight">.e</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">leaderboards</p>
+          <p class="description">Displays the server leaderboards</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.leaderboards</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>Ranking is based on total weight caught</li>
+            <li>Also accepts <span class="command-highlight">.lb</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="category" id="information">
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">server</p>
+          <p class="description">Fetches the Official Big Tuna Server invite link</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.server</p>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">info</p>
+          <p class="description">Fetches command information</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.info &ltcommand (optional)&gt</p>
+          <p class="bottom-italics">.info</p>
+          <p class="bottom-italics">.info baitshop</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>Typing .info start will bring up a start guide</li>
+            <li>Also accepts <span class="command-highlight">.help</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">iteminfo</p>
+          <p class="description">Fetches item/bait information</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.iteminfo &ltitem/bait&gt</p>
+          <p class="bottom-italics">.iteminfo leeches</p>
+          <p class="bottom-italics">.iteminfo wooden rod</p>
+          <p class="bottom-italics">.iteminfo grass line</p>
+          <p class="bottom-italics">.iteminfo rusty hook</p>
+          <p class="bottom-italics">.iteminfo standard aquarium</p>
+          <p class="bottom-italics">.iteminfo hooks</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>Accepts <span class="command-highlight">baits</span>, <span class="command-highlight">rods</span>, <span class="command-highlight">lines</span>, and <span class="command-highlight">hooks</span> as parameters too</li>
+            <li>Also accepts <span class="command-highlight">.ii</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">fishinfo</p>
+          <p class="description">Fetches information about a fish</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.fishinfo &ltfish&gt</p>
+          <p class="bottom-italics">.fishinfo bluegill</p>
+          <p class="bottom-italics">.fishinfo rainbow trout</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>Only works on fish from locations you have unlocked</li>
+            <li>Also accepts <span class="command-highlight">.fi</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">locationinfo</p>
+          <p class="description">Fetches information about a location</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.locationinfo &ltnumber (optional)&gt</p>
+          <p class="bottom-italics">.locationinfo</p>
+          <p class="bottom-italics">.locationinfo 1</p>
+          <p class="bottom-italics">.locationinfo 3</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>Also accepts <span class="command-highlight">.li</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="footer">
+      <div class="footerColumn">
+        <div class="columnText">
+          <h3 class="footerTitle">Official Server</h3>
+          <p>Get support</p>
+          <p>Learn to fish</p>
+          <p>Explore the community</p>
+          <p><a href="https://discord.gg/RaN2VE9zpa" target="_blank">Join the server</a></p>
+        </div>
+      </div>
+      <div class="footerColumn">
+        <div class="columnText">
+          <h3 class="footerTitle">Useful Links</h3>
+          <p><a href="https://top.gg/bot/803361191166607370" target="_blank">Bot page</a></p>
+          <p><a href="https://discord.com/api/oauth2/authorize?client_id=803361191166607370&permissions=59456&scope=bot" target="_blank">Invite now</a></p>
+        </div>
+      </div>
+      <div class="footerColumn">
+        <div class="columnText">
+          <h3 class="footerTitle">Contact</h3>
+          <p id="email">discordbigtuna@gmail.com</p>
+          <p id="discord">Huntail777#4311</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

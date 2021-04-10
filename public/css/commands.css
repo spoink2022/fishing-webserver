@@ -1,0 +1,146 @@
+#main {
+  width: 60%;
+  margin-left: 20%;
+  padding-top: 36px;
+}
+
+#title {
+  font-size: 48px;
+  font-family: "Prompt";
+  letter-spacing: 2px;
+  margin-top: 36px;
+  display: inline-block;
+  border-bottom: 1px solid #21afff;
+}
+
+#subtitle {
+  font-size: 18px;
+  margin-top: 8px;
+  color: #c4c4c4;
+}
+
+#type-selector { padding: 32px 0 16px 0; }
+
+#type-selector p {
+  display: inline-block;
+  font-size: 20px;
+  margin-right: 32px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.selected { color: #21afff; }
+
+.category { display: none; min-height: 80vh; }
+.visible { display: block; }
+
+.top {
+  cursor: pointer;
+  padding-bottom: 16px;
+  user-select: none;
+}
+
+.command {
+  background-color: #16161d;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  margin-top: 24px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: 0.2s border-color;
+}
+.command:last-child { margin-bottom: 128px; }
+.command-selected { border: 1px solid #21afff; }
+
+.command p { margin-left: 48px; }
+
+.command-name {
+  padding-top: 16px;
+  font-size: 20px;
+}
+
+.command hr {
+  margin: 0 48px;
+}
+
+.description, .bottom-text, .bottom-italics, li {
+  color: #c4c4c4;
+  font-size: 16px;
+  padding-top: 4px;
+}
+
+.bottom { 
+  padding-bottom: 24px;
+  display: none;
+}
+
+.bottom-selected { display: block; }
+
+.bottom-header { padding-top: 16px; }
+
+.bottom-italics { font-style: italic; }
+
+ul { margin-left: 70px; }
+
+.command-highlight {
+  color: #21afff;
+  font-family: "Rubik";
+}
+
+@media only screen and (max-width: 1440px) {
+  #main {
+    width: 80%;
+    margin-left: 10%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  #main {
+    width: 90%;
+    margin-left: 5%;
+    text-align: center;
+  }
+  #title {
+    font-size: 64px;
+    margin-top: 16px;
+  }
+  #subtitle { margin-top: 24px; }
+  #type-selector p { text-align: center; }
+  .category {
+    text-align: left;
+    min-height: 80vh;
+  }
+  .command p { margin-left: 36px; }
+  .command hr { margin: 0 36px;}
+}
+
+@media only screen and (max-width: 420px) {
+  #title {
+    font-size: 48px;
+    margin-top: 0;
+  }
+  #subtitle {
+    font-size: 14px;
+    margin-top: 8px;
+  }
+  #type-selector { padding: 24px 0 12px 0; }
+  #type-selector p {
+    font-size: 16px;
+    margin-right: 8px;
+  }
+  .top { padding-bottom: 12px; }
+  .category { min-height: 0; }
+  .command { margin-top: 16px; }
+  .command p { margin-left: 16px; margin-right: 16px; }
+  .command-name {
+    padding-top: 12px;
+    font-size: 16px;
+  }
+  .command hr { margin: 0 16px; }
+  .description, .bottom-text, .bottom-italics, li { font-size: 12px; }
+  .bottom-header {
+    font-size: 14px;
+    padding-top: 12px;
+  }
+  .bottom { padding-bottom: 16px; }
+  ul { margin-left: 48px; }
+}
