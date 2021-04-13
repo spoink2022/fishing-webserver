@@ -1,4 +1,5 @@
 onload = function() {
+  const WEBP_SUPPORTED = elem.toDataURL('image/webp').indexOf('data:image/webp') == 0;
   document.getElementById('cover').remove();
   const modal = document.getElementById('modal');
   const modalImg = document.getElementById('modalImg');
@@ -8,7 +9,11 @@ onload = function() {
   document.querySelectorAll('.image').forEach(image => {
     image.addEventListener('click', event => {
       modal.style.display = 'flex';
-      modalImg.src = image.src;
+      if (WEBP_SUPPORTED) {
+        modalImg.src = image.src;
+      } else {
+        modalImg.src = image.src.replace('webp', 'jpg');
+      }
     });
   });
 }
