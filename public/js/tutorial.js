@@ -1,5 +1,7 @@
 onload = function() {
+  let elem = document.createElement('canvas');
   const WEBP_SUPPORTED = elem.toDataURL('image/webp').indexOf('data:image/webp') == 0;
+  
   document.getElementById('cover').remove();
   const modal = document.getElementById('modal');
   const modalImg = document.getElementById('modalImg');
