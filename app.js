@@ -38,6 +38,10 @@ app.get('/commands', (req, res) => {
   res.render('commands.ejs');
 });
 
+app.get('/start', (req, res) => {
+  res.render('tutorial.ejs');
+});
+
 let httpServer = http.createServer(app);
 httpServer.listen(config.HTTP_PORT);
 console.log(`Listening: http on port ${config.HTTP_PORT}`);    

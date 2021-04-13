@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@700&family=Recursive:wght@300;400;500&family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@500;700&family=Recursive:wght@300;400;500&family=Rubik:wght@300;400;500&display=swap');
 
 * {
   margin: 0;
@@ -36,6 +36,11 @@ navbar a:hover { color: white; }
 
 .selected-link { border-bottom: 1px solid #c4c4c4; }
 .selected-link:hover { border-bottom: 1px solid white; }
+
+#footerWrapper {
+  width: 60%;
+  margin-left: 20%;
+}
 
 #footer {
   margin: 48px auto 24px auto;
@@ -77,7 +82,7 @@ navbar a:hover { color: white; }
 #email { white-space: nowrap; }
 
 #email::before {
-  background-image: url("../images/email.png");
+  background-image: url("../images/original/email.png");
   display: inline-block;
   background-size: 22px 15px;
   width: 22px;
@@ -88,8 +93,10 @@ navbar a:hover { color: white; }
   content: "";
 }
 
+#discord { white-space: nowrap; }
+
 #discord::before {
-  background-image: url("../images/discord.png");
+  background-image: url("../images/original/discord.png");
   display: inline-block;
   background-size: 20px 20px;
   width: 20px;

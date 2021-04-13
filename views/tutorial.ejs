@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="LegendCow">
+  <meta name="description" content="An updated collection of commands for the Big Tuna Discord fishing bot">
+  <meta name="keywords" content="tutorial, basics, help, bigtuna, big tuna, discord, discord bot, fishing, discord fishing, fishing bot">
+  <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+
+  <title>Big Tuna - Getting Started</title>
+
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/tutorial.css">
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DDRVK2WS87"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-DDRVK2WS87');
+  </script>
+
+  <script src="../js/tutorial.js"></script>
+</head>
+<body>
+  <div id="cover"></div>
+
+  <navbar>
+    <a href="/">Home</a>
+    <a href="/commands">Commands</a>
+    <a href="/start" class="selected-link">Start Guide</a>
+  </navbar>
+
+  <div id="modal">
+    <img id="modalImg">
+  </div>
+
+  <div id="main">
+    <h1 id="title">GETTING STARTED</h1>
+    <p id="subtitle">A simple step-by-step guide covering the basics of the Big Tuna discord fishing bot</p>
+
+    <div class="section">
+      <h2 class="header">Inviting Big Tuna</h2>
+      <p class="text">If you already have Big Tuna in one of your servers, skip this step and head over to <a href="javascript: scrollTo('help')">The Help Command.</a></p>
+      <p class="text">To invite Big Tuna, simply click <a href="https://discord.com/oauth2/authorize?client_id=803361191166607370&permissions=59456&scope=bot" target="_blank">here</a> and select a server. Note that you may only pick from servers that you have adequate permissions in.</p>
+      <p class="text">Ensure you allow Big Tuna all of the requested permissions.</p>
+      <picture>
+        <source srcset="../images/web/authorize.webp" type="image/webp">
+        <source srcset="../images/backup/authorize.jpg" type="image/jpeg">
+        <img class="image" src="../images/web/authorize.webp" alt="authorize">
+      </picture>
+    </div>
+
+    <div class="section" id="help">
+      <h2 class="header">The Help Command</h2>
+      <p class="text">Now that you have Big Tuna in your server, it is time to set up a fishing account.</p>
+      <p class="text">Simply type <span class="command">.init</span> to create an account. You will then be directed to type <span class="command">.info</span> to view the commands page. This will be helpful for when you need to view the list of possible commands. 
+        Typing <span class="command">.info start</span> can be used to access a more compact start guide in Discord.</p>
+      <p class="text">For more information regarding commands, you can visit our <a href="/commands">commands webpage</a> or type <span class="command">.info &ltcommand&gt</span> where &ltcommand&gt is the name of the command you want to know more about. 
+        Generally, the commands webpage has more detail.</p>
+        <picture>
+          <source srcset="../images/web/info.webp" type="image/webp">
+          <source srcset="../images/backup/info.jpg" type="image/jpeg">
+          <img class="image" src="../images/web/info.webp" alt="info">
+        </picture>
+    </div>
+
+    <div class="section">
+      <h2 class="header">Fishing</h2>
+      <p class="text">Enough talk, let’s get to the actual fishing component of the game.</p>
+      <p class="text">You fish by typing <span class="command">.fish</span>, which has a cooldown of 75 minutes. When you fish, you will first see a rendering of your environment. After a few seconds (or after clicking the hook icon), you will see the fish you caught. 
+        Keep in mind that the cooldown can be reset by using the <span class="command">.vote</span> command.</p>
+      <p class="text">When catching a fish, you will receive coins and exp. If you have not previously caught that species of fish, or if the fish is the biggest you’ve caught of that species, 
+        then it will go to your <a href="javascript: scrollTo('aquarium')">aquarium.</a></p>
+      <p class="text">The tier that is associated with the fish you caught is solely based on the weight of the fish relative to that of its species. 
+        For example, a C-Tier blacktail shiner would weigh from 95g to 139g while a B-Tier blacktail shiner would weigh from 140g to 163g.</p>
+      <picture>
+        <source srcset="../images/web/caught_wide.webp" type="image/webp">
+        <source srcset="../images/backup/caught_wide.jpg" type="image/jpeg">
+        <img class="image" src="../images/web/caught_wide.webp" alt="catch">
+      </picture>
+    </div>
+
+    <div class="section" id="aquarium">
+      <h2 class="header">Aquariums</h2>
+      <p class="text">An aquarium serves as both a place to view your most impressive catches and as a source of income. 
+        As you do not unlock the 2nd fishing location until level 10, you will only have access to one aquarium until then.</a></p>
+      <p class="text">Type <span class="command">.aquarium</span> to view your aquarium, and react with the coin icon to collect the money it has generated. 
+        Without any upgrades, the aquarium has a maximum coin capacity of 10. Alternatively, you can type <span class="command">.collect</span> to collect the coins in your aquarium.</p>
+      <p class="text">Coins per hour is determined by the fish in your aquarium. Each fish contributes a certain amount, which is dependent on both the tier and rarity of the fish.</p>
+      <picture>
+        <source srcset="../images/web/aquarium_1.webp" type="image/webp">
+        <source srcset="../images/backup/aquarium_1.jpg" type="image/jpeg">
+        <img class="image" src="../images/web/aquarium_1.webp" alt="aquarium">
+      </picture>
+    </div>
+
+    <div class="section">
+      <h2 class="header">Upgrading Your Equipment</h2>
+      <p class="text">If you’re particularly unlucky, you may have noticed that your line has snapped when you tried to fish. This is because the maximum weight of your equipment is less than the weight of that fish.</a></p>
+      <p class="text">In order to increase your maximum weight, you must upgrade your hook, line, and rod from the shop. To buy something, type <span class="command">.shop</span> and react with the icon number corresponding to the item you want to upgrade. 
+        Note that your maximum weight is the weakest one out of your hook, line, and rod.</p>
+      <p class="text">In the shop, you will also see the option to upgrade your aquarium. This will make your aquarium look nicer, increase revenue, and also increase coin capacity.</p>
+      <p class="text">Quick tip: always buy the aquarium upgrade when you can. It’s worth it.</p>
+      <picture>
+        <source srcset="../images/web/shop.webp" type="image/webp">
+        <source srcset="../images/backup/shop.jpg" type="image/jpeg">
+        <img class="image" src="../images/web/shop.webp" alt="shop">
+      </picture>
+    </div>
+
+    <div class="section">
+      <h2 class="header">Other Useful Commands</h2>
+      <p class="text">There are a couple other useful commands that you can use before reaching level 10 that you should know about:</a></p>
+      <p class="text"><span class="command">.stats</span> - shows your personal stats</p>
+      <p class="text"><span class="command">.serverstats</span> - shows you your server’s stats</p>
+      <p class="text"><span class="command">.leaderboards</span> - shows your server’s leaderboards</p>
+      <p class="text"><span class="command">.server</span> - provides a link to the official Big Tuna server</p>
+      <p class="text">There is lots to learn about Big Tuna’s extensive gameplay, but with these basics and a little patience, you should be well on your way to becoming an experienced fisherman!</p>
+    </div>
+  </div>
+
+  <div id="footerWrapper">
+    <div id="footer">
+      <div class="footerColumn">
+        <div class="columnText">
+          <h3 class="footerTitle">Official Server</h3>
+          <p>Get support</p>
+          <p>Learn to fish</p>
+          <p>Explore the community</p>
+          <p><a href="https://discord.gg/RaN2VE9zpa" target="_blank">Join the server</a></p>
+        </div>
+      </div>
+      <div class="footerColumn">
+        <div class="columnText">
+          <h3 class="footerTitle">Useful Links</h3>
+          <p><a href="https://top.gg/bot/803361191166607370" target="_blank">Bot page</a></p>
+          <p><a href="https://discord.com/api/oauth2/authorize?client_id=803361191166607370&permissions=59456&scope=bot" target="_blank">Invite now</a></p>
+        </div>
+      </div>
+      <div class="footerColumn">
+        <div class="columnText">
+          <h3 class="footerTitle">Contact</h3>
+          <p id="email">discordbigtuna@gmail.com</p>
+          <p id="discord">Huntail777#4311</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

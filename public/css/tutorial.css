@@ -1,0 +1,113 @@
+#main {
+  width: 768px;
+  margin: auto;
+  padding-top: 36px;
+}
+
+#title {
+  font-size: 48px;
+  font-family: "Prompt";
+  letter-spacing: 2px;
+  margin-top: 36px;
+  display: inline-block;
+  border-bottom: 1px solid #21afff;
+}
+
+#subtitle {
+  font-size: 18px;
+  margin-top: 8px;
+  color: #c4c4c4;
+}
+
+.section { margin-top: 72px; }
+
+.header {
+  display: inline-block;
+  padding-bottom: 4px;
+  font-size: 36px;
+  font-family: "Rubik";
+  font-weight: 500;
+  color: white;
+  border-bottom: 1px solid #21afff;
+}
+
+.text {
+  font-size: 18px;
+  font-family: "Rubik";
+  font-weight: 300;
+  color: #efefef;
+  margin-top: 24px;
+  line-height: 175%;
+}
+
+.command { font-weight: 500; }
+
+.image {
+  width: 100%;
+  margin-top: 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.section a {
+  color: #21afff;
+  text-decoration: none;
+}
+
+.section a:hover { text-decoration: underline; }
+
+#modal {
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+#modalImg {
+  animation-name: zoom;
+  animation-duration: 0.3s;
+}
+
+@keyframes zoom {
+  from { transform: scale(0); }
+  to { transform: scale(1); }
+}
+
+#footerWrapper {
+  margin-top: 128px;
+}
+
+@media only screen and (max-width: 1440px) {
+  #main { width: 700px; }
+  #modalImg { width: 800px; }
+}
+
+@media only screen and (max-width: 1024px) {
+  #main { width: 600px; }
+  #modalImg { width: 100%; }
+}
+
+@media only screen and (max-width: 420px) {
+  #main {
+    width: 300px;
+    padding-top: 0;
+    text-align: center;
+  }
+  #title {
+    display: inline-block;
+    font-size: 48px;
+    line-height: 48px;
+    border: none;
+  }
+  #subtitle { font-size: 16px; }
+  .section { margin-top: 48px; }
+  .header { font-size: 30px; }
+  .text {
+    font-size: 15px;
+    margin-top: 18px;
+  }
+}
