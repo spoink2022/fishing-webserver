@@ -65,11 +65,13 @@
   background-color: rgba(0, 0, 0, 0.9);
   justify-content: center;
   align-items: center;
+  z-index: 3;
 }
 
 #modalImg {
   animation-name: zoom;
   animation-duration: 0.3s;
+  width: 1200px;
 }
 
 @keyframes zoom {

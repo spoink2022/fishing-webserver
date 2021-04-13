@@ -18,6 +18,22 @@ body {
 ::-webkit-scrollbar-thumb { background: #14141A; border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: #555; }
 
+#logo {
+  width: 64px;
+  position: fixed;
+  top: 32px;
+  left: 32px;
+  border-radius: 32px;
+  transition: 0.3s;
+  z-index: 1;
+  filter: brightness(90%);
+}
+
+#logo:hover {
+  border-radius: 16px;
+  filter: brightness(100%);
+}
+
 navbar {
   float: right;
   margin-top: 32px;
@@ -113,6 +129,7 @@ navbar a:hover { color: white; }
 }
 
 @media only screen and (max-width: 1024px) {
+  #logo { width: 54px; }
   #footer { width: 100%; }
   .footerTitle { font-size: 18px; }
   .columnText p { font-size: 15px; }
@@ -120,6 +137,7 @@ navbar a:hover { color: white; }
 }
 
 @media only screen and (max-width: 768px) {
+  #logo { display: none; }
   #footer { width: 100%; margin-top: 128px; }
   .footerColumn {
     width: 100%;
