@@ -1,4 +1,4 @@
-const PROD = true;
+const PROD = false;
 
 const Global = require('./global.js');
 const config = require('./private/config.json');
@@ -17,6 +17,8 @@ if (PROD) {
 const express = require('express');
 const app = express();
 
+const favicon = require('serve-favicon');
+
 app.set('view engine', 'ejs');
 app.use(express.static('public'))
 
@@ -28,6 +30,8 @@ if (PROD) {
       next();
   });
 }
+
+app.use(favicon('public/images/favicon.ico'))
 
 app.get('/', (req, res) => {
   const stats = Global.getStats();
