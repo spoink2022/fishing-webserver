@@ -1,4 +1,4 @@
-const PROD = true;
+const PROD = false;
 
 const Global = require('./global.js');
 const config = require('./private/config.json');
@@ -44,6 +44,10 @@ app.get('/commands', (req, res) => {
 
 app.get('/start', (req, res) => {
   res.render('tutorial.ejs');
+});
+
+app.get('/advanced', (req, res) => {
+  res.render('advanced.ejs');
 });
 
 let httpServer = http.createServer(app);

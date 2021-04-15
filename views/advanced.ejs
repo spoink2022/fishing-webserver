@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="LegendCow">
+  <meta name="description" content="An updated collection of commands for the Big Tuna Discord fishing bot">
+  <meta name="keywords" content="advanced gameplay, level 10, help, bigtuna, big tuna, fishing, discord fishing, fishing bot">
+  <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+
+  <title>Big Tuna - Advanced Gameplay</title>
+
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/guides.css">
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DDRVK2WS87"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-DDRVK2WS87');
+  </script>
+
+  <script src="../js/guides.js"></script>
+</head>
+<body>
+  <div id="cover"></div>
+
+  <a href="https://top.gg/bot/803361191166607370" target="_blank">
+    <picture>
+      <source srcset="../images/web/logo.webp" type="image/webp">
+      <source srcset="../images/backup/logo.jpg" type="image/jpeg">
+      <img id="logo" src="../images/web/logo.webp">
+    </picture>
+  </a>
+
+  <navbar>
+    <a href="/">Home</a>
+    <a href="/commands">Commands</a>
+    <a href="/start">Start Guide</a>
+    <a href="/advanced" class="selected-link">Advanced Gameplay</a>
+  </navbar>
+
+  <div id="modal">
+    <img id="modalImg">
+  </div>
+
+  <div id="main">
+    <h1 id="title">ADVANCED GAMEPLAY</h1>
+    <p id="subtitle">A guide to the wide range of features Big Tuna offers for when users reach level 10</p>
+
+    <div class="section">
+      <h2 class="header">The Second Location</h2>
+      <p class="text">When reaching level 10, you will unlock access to the second fishing location. Here you’ll come across larger and more valuable fish, so make sure your equipment is up to the task of fishing here!</p>
+      <p class="text">Typing <span class="command">.setlocation 2</span> will move you to this location. Similarly, typing <span class="command">.setlocation 1</span> will move you back to the first location.</p>
+      <p class="text">You will also gain access to an aquarium for location 2, which can be viewed by typing <span class="command">.aquarium 2</span>. This aquarium generates and stores coins separately from the first one, so it is convenient to use the .collect command as it collects the coins from all of your aquariums.</p>   
+      <picture>
+        <source srcset="../images/web/location_2.webp" type="image/webp">
+        <source srcset="../images/backup/location_2.jpg" type="image/jpeg">
+        <img class="image" src="../images/web/location_2.webp" alt="location 2">
+      </picture>
+    </div>
+
+    <div class="section">
+      <h2 class="header">Quests</h2>
+      <p class="text">At level 10, you will also unlock quests, which can be viewed by typing <span class="command">.quest</span>. Each player may only have 1 quest at a time. When you complete a quest and claim your rewards, a new quest will take its place.</p>
+      <p class="text">Quests currently come in 3 forms:</p>
+      <p class="text">Catch a certain amount of fish in weight</p>
+      <ul>
+       <li>Catch 17kg of fish</li>
+       <li>Catch 42kg of fish</li>
+      </ul>
+      <p class="text">Catch a certain quantity of fish by tier</p>
+      <ul>
+        <li>Catch 3 fish A-Tier or above</li>
+        <li>Catch 7 fish C-Tier or above</li>
+      </ul>
+      <p class="text">Catch a certain quantity of fish by species</p>
+      <ul>
+        <li>Catch 4 bluegill</li>
+        <li>Catch 1 bowfin</li>
+      </ul>
+      <p class="text">Quests reward players with quest points (which look like lollipops) that can be used to purchase <a href="javascript: scrollTo('baits')">baits</a>. Also note that quests are all created relatively equal, but if you really don’t like your quest, don’t worry!</p>
+      <p class="text">After 3 days, in your quest page viewed by calling <span class="command">.quest</span>, you will have the option of resetting your quest.</p>
+        <picture>
+          <source srcset="../images/web/quest.webp" type="image/webp">
+          <source srcset="../images/backup/quest.jpg" type="image/jpeg">
+          <img class="image" src="../images/web/quest.webp" alt="quest">
+        </picture>
+    </div>
+
+    <div class="section">
+      <h2 class="header">Bounties</h2>
+      <p class="text">At level 10, you will have access to weekly bounties, which can be viewed by typing <span class="command">.bounty</span>.</p>
+      <p class="text">Bounties are essentially quests that reset on a weekly basis. Everyone has the same bounty, and may only complete each bounty once.</p>
+      <p class="text">Unlike quests, bounties follow the same structure every time: catch a certain species above a certain tier. For example:</p>
+      <ul>
+        <li>Catch a redear sunfish A-Tier or above</li>
+        <li>Catch a chain pickerel C-Tier or above</li>
+      </ul>
+      <p class="text">Bounties are also rewarded with quest points, but offer a deal statistically twice as good as quests.</p>
+      <picture>
+        <source srcset="../images/web/bounty.webp" type="image/webp">
+        <source srcset="../images/backup/bounty.jpg" type="image/jpeg">
+        <img class="image" src="../images/web/bounty.webp" alt="bounty">
+      </picture>
+    </div>
+
+    <div class="section">
+      <h2 class="header">The Baitshop</h2>
+      <p class="text">Upon unlocking quests and bounties, players will be able to spend their earned quest points on consumable baits. To view information about a bait, simply type <span class="command">.iteminfo &ltbait&gt</span>.</p>
+      <p class="text">For a list of baits, type <span class="command">.iteminfo baits</span>.</p>
+      <p class="text">Typing <span class="command">.baitshop</span> will open the shop for baits. This shop is the same for every player, changes once a day, and contains 3 random deals.</p>
+      <p class="text">Make sure you are buying baits at a good price by using the <span class="command">.iteminfo</span> command, which will include the recommended price of the bait.</p>
+      <p class="text">Your baits can be viewed by typing <span class="command">.baits</span>.</p>
+      <picture>
+        <source srcset="../images/web/baitshop.webp" type="image/webp">
+        <source srcset="../images/backup/baitshop.jpg" type="image/jpeg">
+        <img class="image" src="../images/web/baitshop.webp" alt="baitshop">
+      </picture>
+    </div>
+
+    <div class="section" id="baits">
+      <h2 class="header">Using Baits</h2>
+      <p class="text">Baits can be used by typing <span class="command">.fish &ltbait&gt</span> (for example <span class="command">.fish worms</span>). Of course, this will only work if you have at least one of that bait.</p>
+      <p class="text">Baits have 2 traits, fish tiers and fish sizes, which can be viewed by using the <span class="command">.iteminfo</span> command.</p>
+      <p class="text">Fish tiers are pretty straightforward. Some baits guarantee that the fish you catch is a certain tier. For example, using meat as bait guarantees that your catch is at least A-Tier. This will also directly increase the chances of getting an S-Tier and SS-Tier, so yes, it works like that.</p>
+      <p class="text">Fish sizes are a little more complex. Every fish has a size associated with it that can be viewed with the <span class="command">.fishinfo</span> command. Sizes are small, medium, large, and extra large. Basically, some baits will only catch fish that fall under certain size groups.</p>
+      <p class="text">Overall, baits are a great way to better your aquariums, speedrun quests, and complete bounties. Take advantage of them!</p>
+      <picture>
+        <source srcset="../images/web/fishing_with_bait.webp" type="image/webp">
+        <source srcset="../images/backup/fishing_with_bait.jpg" type="image/jpeg">
+        <img class="image" src="../images/web/fishing_with_bait.webp" alt="fishing with bait">
+      </picture>
+    </div>
+
+    <div class="section">
+      <h2 class="header">What's Next?</h2>
+      <p class="text">Congratulations on getting this far, but there’s still lots more to go!</p>
+      <p class="text">Events, fishing clans, and other features - not to mention all the other fishing locations and equipment levels - are just waiting to be discovered.</p>
+      <p class="text">Whether they’re queued up, not yet unlocked, or soon to be released, there will always be more to do with Big Tuna!</p>
+    </div>
+  </div>
+
+  <div id="footerWrapper">
+    <div id="footer">
+      <div class="footerColumn">
+        <div class="columnText">
+          <h3 class="footerTitle">Official Server</h3>
+          <p>Get support</p>
+          <p>Learn to fish</p>
+          <p>Explore the community</p>
+          <p><a href="https://discord.gg/RaN2VE9zpa" target="_blank">Join the server</a></p>
+        </div>
+      </div>
+      <div class="footerColumn">
+        <div class="columnText">
+          <h3 class="footerTitle">Useful Links</h3>
+          <p><a href="https://top.gg/bot/803361191166607370" target="_blank">Bot page</a></p>
+          <p><a href="https://discord.com/api/oauth2/authorize?client_id=803361191166607370&permissions=59456&scope=bot" target="_blank">Invite now</a></p>
+        </div>
+      </div>
+      <div class="footerColumn">
+        <div class="columnText">
+          <h3 class="footerTitle">Contact</h3>
+          <p id="email">discordbigtuna@gmail.com</p>
+          <p id="discord">Huntail777#4311</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

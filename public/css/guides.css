@@ -19,7 +19,10 @@
   color: #c4c4c4;
 }
 
-.section { margin-top: 72px; }
+.section {
+  margin-top: 36px;
+  padding-top: 36px;
+}
 
 .header {
   display: inline-block;
@@ -31,13 +34,24 @@
   border-bottom: 1px solid #21afff;
 }
 
-.text {
+.text, li {
   font-size: 18px;
   font-family: "Rubik";
   font-weight: 300;
   color: #efefef;
   margin-top: 24px;
   line-height: 175%;
+}
+
+ul {
+  margin-top: 8px;
+  margin-left: 36px;
+}
+
+li {
+  margin-top: 0;
+  font-style: italic;
+  color: #c4c4c4;
 }
 
 .command { font-weight: 500; }
@@ -112,4 +126,6 @@
     font-size: 15px;
     margin-top: 18px;
   }
+  ul { margin-left: 0; }
+  li { font-size: 15px; }
 }
