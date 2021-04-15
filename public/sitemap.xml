@@ -56,7 +56,8 @@
         <image:title>shop</image:title>
       </image:image>
   </url>
-  <loc>https://bigtuna.xyz/advanced</loc>
+  <url>
+    <loc>https://bigtuna.xyz/advanced</loc>
     <lastmod>2021-04-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -80,6 +81,7 @@
         <image:loc>https://bigtuna.xyz/images/web/fishing_with_bait.webp</image:loc>
         <image:title>fishing with bait</image:title>
       </image:image>
+  </url>
   <url>
     <loc>https://bigtuna.xyz/commands</loc>
     <lastmod>2021-04-13</lastmod>
