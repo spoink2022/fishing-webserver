@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://bigtuna.xyz/</loc>
-    <lastmod>2021-04-13</lastmod>
+    <lastmod>2021-04-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
       <image:image>
@@ -32,9 +32,13 @@
   </url>
   <url>
     <loc>https://bigtuna.xyz/start</loc>
-    <lastmod>2021-04-13</lastmod>
+    <lastmod>2021-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+      <image:image>
+        <image:loc>https://bigtuna.xyz/images/web/logo.webp</image:loc>
+        <image:title></image:title>
+      </image:image>
       <image:image>
         <image:loc>https://bigtuna.xyz/images/web/authorize.webp</image:loc>
         <image:title>authorize</image:title>
@@ -58,9 +62,13 @@
   </url>
   <url>
     <loc>https://bigtuna.xyz/advanced</loc>
-    <lastmod>2021-04-15</lastmod>
+    <lastmod>2021-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+      <image:image>
+        <image:loc>https://bigtuna.xyz/images/web/logo.webp</image:loc>
+        <image:title></image:title>
+      </image:image>
       <image:image>
         <image:loc>https://bigtuna.xyz/images/web/location_2.webp</image:loc>
         <image:title>location 2</image:title>
@@ -84,8 +92,12 @@
   </url>
   <url>
     <loc>https://bigtuna.xyz/commands</loc>
-    <lastmod>2021-04-13</lastmod>
+    <lastmod>2021-04-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+      <image:image>
+        <image:loc>https://bigtuna.xyz/images/web/logo.webp</image:loc>
+        <image:title></image:title>
+      </image:image>
   </url>
 </urlset>
