@@ -1,4 +1,4 @@
-const PROD = true;
+const PROD = false;
 
 const Global = require('./global.js');
 const config = require('./private/config.json');
