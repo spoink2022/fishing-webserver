@@ -107,10 +107,13 @@ li {
   #modalImg { width: 100%; }
 }
 
+@media only screen and (max-width: 768px) {
+  #main { padding-top: 48px; }
+}
+
 @media only screen and (max-width: 420px) {
   #main {
     width: 300px;
-    padding-top: 0;
     text-align: center;
   }
   #title {

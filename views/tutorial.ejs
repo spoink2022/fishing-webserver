@@ -23,6 +23,7 @@
     gtag('config', 'G-DDRVK2WS87');
   </script>
 
+  <script src="../js/global.js"></script>
   <script src="../js/guides.js"></script>
 </head>
 <body>
@@ -35,6 +36,8 @@
       <img id="logo" src="../images/web/logo.webp">
     </picture>
   </a>
+
+  <div id="menu" onclick="toggleDropdown()"><img src="../images/png/menu.png" alt="menu icon" id="menuImg"></div>
 
   <navbar>
     <a href="/">Home</a>
@@ -53,7 +56,7 @@
 
     <div class="section">
       <h2 class="header">Inviting Big Tuna</h2>
-      <p class="text">If you already have Big Tuna in one of your servers, skip this step and head over to <a href="javascript: scrollTo('help')">The Help Command.</a></p>
+      <p class="text">If you already have Big Tuna in one of your servers, skip this step and head over to <a href="javascript: scrollToSection('help')">The Help Command.</a></p>
       <p class="text">To invite Big Tuna, simply click <a href="https://discord.com/oauth2/authorize?client_id=803361191166607370&permissions=59456&scope=bot" target="_blank">here</a> and select a server. Note that you may only pick from servers that you have adequate permissions in.</p>
       <p class="text">Ensure you allow Big Tuna all of the requested permissions.</p>
       <picture>
@@ -83,7 +86,7 @@
       <p class="text">You fish by typing <span class="command">.fish</span>, which has a cooldown of 75 minutes. When you fish, you will first see a rendering of your environment. After a few seconds (or after clicking the hook icon), you will see the fish you caught. 
         Keep in mind that the cooldown can be reset by using the <span class="command">.vote</span> command.</p>
       <p class="text">When catching a fish, you will receive coins and exp. If you have not previously caught that species of fish, or if the fish is the biggest you’ve caught of that species, 
-        then it will go to your <a href="javascript: scrollTo('aquarium')">aquarium.</a></p>
+        then it will go to your <a href="javascript: scrollToSection('aquarium')">aquarium.</a></p>
       <p class="text">The tier that is associated with the fish you caught is solely based on the weight of the fish relative to that of its species. 
         For example, a C-Tier blacktail shiner would weigh from 95g to 139g while a B-Tier blacktail shiner would weigh from 140g to 163g.</p>
       <picture>

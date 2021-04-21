@@ -23,6 +23,7 @@
     gtag('config', 'G-DDRVK2WS87');
   </script>
 
+  <script src="../js/global.js"></script>
   <script src="../js/guides.js"></script>
 </head>
 <body>
@@ -35,6 +36,8 @@
       <img id="logo" src="../images/web/logo.webp">
     </picture>
   </a>
+
+  <div id="menu" onclick="toggleDropdown()"><img src="../images/png/menu.png" alt="menu icon" id="menuImg"></div>
 
   <navbar>
     <a href="/">Home</a>
@@ -82,7 +85,7 @@
         <li>Catch 4 bluegill</li>
         <li>Catch 1 bowfin</li>
       </ul>
-      <p class="text">Quests reward players with quest points (which look like lollipops) that can be used to purchase <a href="javascript: scrollTo('baits')">baits</a>. Also note that quests are all created relatively equal, but if you really don’t like your quest, don’t worry!</p>
+      <p class="text">Quests reward players with quest points (which look like lollipops) that can be used to purchase <a href="javascript: scrollToSection('baits')">baits</a>. Also note that quests are all created relatively equal, but if you really don’t like your quest, don’t worry!</p>
       <p class="text">After 3 days, in your quest page viewed by calling <span class="command">.quest</span>, you will have the option of resetting your quest.</p>
         <picture>
           <source srcset="../images/web/quest.webp" type="image/webp">
