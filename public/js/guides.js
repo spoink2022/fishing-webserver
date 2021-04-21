@@ -20,4 +20,4 @@ onload = function() {
   });
 }
 
-function scrollTo(l) { document.getElementById(l).scrollIntoView({ behavior: 'smooth' }); }
+function scrollToSection(l) { document.getElementById(l).scrollIntoView({ behavior: 'smooth' }); }

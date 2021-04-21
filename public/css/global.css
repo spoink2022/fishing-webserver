@@ -34,10 +34,28 @@ body {
   filter: brightness(100%);
 }
 
+#menu {
+  display: none;
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  top: 12px;
+  right: 24px;
+  z-index: 5;
+
+  cursor: pointer;
+}
+
+#menuImg {
+  width: 100%;
+  filter: invert(1);
+}
+
 navbar {
   float: right;
   margin-top: 32px;
   margin-right: 48px; 
+  z-index: 2;
 }
 
 navbar a {
@@ -98,7 +116,7 @@ navbar a:hover { color: white; }
 #email { white-space: nowrap; }
 
 #email::before {
-  background-image: url("../images/original/email.png");
+  background-image: url("../images/png/email.png");
   display: inline-block;
   background-size: 22px 15px;
   width: 22px;
@@ -112,7 +130,7 @@ navbar a:hover { color: white; }
 #discord { white-space: nowrap; }
 
 #discord::before {
-  background-image: url("../images/original/discord.png");
+  background-image: url("../images/png/discord.png");
   display: inline-block;
   background-size: 20px 20px;
   width: 20px;
@@ -150,6 +168,34 @@ navbar a:hover { color: white; }
     margin-left: 0;
   }
   .columnText p { font-size: 15px; }
+
+  #menu { display: block; }
+  navbar {
+    display: block;
+    float: none;
+    position: fixed;
+    margin: 0;
+    padding-top: 72px;
+    width: 100vw;
+    height: 100vh;
+    background-color: #20202A;
+    z-index: 4;
+    top: -100vh;
+    opacity: 0;
+    transition: 0.5s ease;
+  }
+  navbar a {
+    display: block;
+    width: 100%;
+    height: 72px;
+    line-height: 72px;
+    margin-left: 0;
+    text-align: center;
+    font-weight: 400;
+    text-transform: uppercase;
+    user-select: none;
+  }
+  .selected-link, .selected-link:hover { border-bottom: none; }
 }
 
 @media only screen and (max-width: 420px) {

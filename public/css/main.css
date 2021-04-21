@@ -244,6 +244,20 @@
 }
 
 @media only screen and (max-width: 420px) {
+  .main {
+    top: 10%;
+    width: 80%;
+  }
+  #title {
+    font-size: 18vw;
+    line-height: 18vw;
+  }
+  #subtitle { display: none; }
+  #inviteButton { 
+    width: 70%;
+    font-size: 4vw;
+  }
+  .stats { top: 50%; }
   .row { padding: 80px 0; }
   .one { transform: translateY(-2px); }
   .two { transform: translateY(-14px); }
