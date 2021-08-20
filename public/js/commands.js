@@ -1,6 +1,15 @@
 onload = function() {
   document.getElementById('cover').remove();
   let last = document.getElementsByClassName('selected')[0];
+
+  if (preset && ['statistics', 'information', 'clans'].includes(preset)) {
+    document.getElementById('gameplay').classList.remove('visible');
+    last.classList.remove('selected');
+    last = document.querySelectorAll('#type-selector p')[{statistics: 1, information: 2, clans: 3}[preset]];
+    last.classList.add('selected');
+    document.getElementById(preset).classList.add('visible');
+  }
+
   document.querySelectorAll('#type-selector p').forEach(element => {
     element.addEventListener('click', event => {
       event.target.classList.add('selected');

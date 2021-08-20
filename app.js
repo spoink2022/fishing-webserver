@@ -1,4 +1,4 @@
-const PROD = true;
+const PROD = false;
 
 const Global = require('./global.js');
 const config = require('./private/config.json');
@@ -39,7 +39,10 @@ app.get('/', (req, res) => {
 });
 
 app.get('/commands', (req, res) => {
-  res.render('commands.ejs');
+  res.render('commands.ejs', {preset: null});
+});
+app.get('/commands/*', (req, res) => {
+  res.render('commands.ejs', {preset: req.params['0']});
 });
 
 app.get('/start', (req, res) => {
@@ -47,6 +50,7 @@ app.get('/start', (req, res) => {
 });
 
 app.get('/advanced', (req, res) => {
+  console.log(req);
   res.render('advanced.ejs');
 });
 

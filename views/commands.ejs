@@ -21,6 +21,9 @@
     gtag('js', new Date());
 
     gtag('config', 'G-DDRVK2WS87');
+
+
+    const preset = "<%= preset %>";    
   </script>
 
   <script src="../js/global.js"></script>
@@ -54,6 +57,7 @@
       <p class="selected">gameplay</p>
       <p>statistics</p>
       <p>information</p>
+      <p>clans</p>
     </div>
 
     <div class="category visible" id="gameplay">
@@ -382,6 +386,208 @@
           <p class="bottom-header">Other Information</p>
           <ul>
             <li>Also accepts <span class="command-highlight">.li</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="category" id="clans">
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">clan</p>
+          <p class="description">Shows your clan page</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.clan</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>Green square means member last fished within a week</li>
+            <li>Yellow square means member last fished within 2 weeks</li>
+            <li>Red square means member last fished over 2 weeks ago</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">create</p>
+          <p class="description">Creates a fishing clan</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.createclan</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>Requires Lvl.20 or above</li>
+            <li>Costs 5000 coins</li>
+            <li>Also accepts <span class="command-highlight">.createclan</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">rename</p>
+          <p class="description">Rename your clan to something of your choosing</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.rename &ltnew name&gt</p>
+          <p class="bottom-italics">.rename The Big Fishers</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>Maximum 32 characters</li>
+            <li>Must only use characters from the english alphabet</li>
+            <li>Cannot start or end with a space, or have 2 spaces in a row</li>
+            <li>Also accepts <span class="command-highlight">.renameclan</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">join</p>
+          <p class="description">Join a clan</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.join &ltClan ID&gt &ltpassword (optional)&gt</p>
+          <p class="bottom-italics">.join 14</p>
+          <p class="bottom-italics">.join 73 xyslkg</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>No level requirement</li>
+            <li>Also accepts <span class="command-highlight">.joinclan</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">leave</p>
+          <p class="description">Leave a clan</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.leave</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>Also accepts <span class="command-highlight">.leaveclan</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">password</p>
+          <p class="description">View clan password</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.password</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>Only usable by Trusted Members and Leaders</li>
+            <li>Also accepts <span class="command-highlight">.pass</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">newpassword</p>
+          <p class="description">Generates a new clan password</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.newpassword</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>Turns on the password feature if it was disabled</li>
+            <li>Only usable by Trusted Members and Leaders</li>
+            <li>Also accepts <span class="command-highlight">.newpass</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">nopassword</p>
+          <p class="description">Turns off passwords for your clan</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.nopassword</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>Only usable by Trusted Members and Leaders</li>
+            <li>Also accepts <span class="command-highlight">.nopass</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">promote</p>
+          <p class="description">Promote players within a clan</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.promote &ltping/username&gt</p>
+          <p class="bottom-italics">.promote @Huntail777#4311</p>
+          <p class="bottom-italics">.promote Huntail777#4311</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>Only usable by Trusted Members and Leaders</li>
+            <li>Can be used to promote Trusted Members to Leaders</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">demote</p>
+          <p class="description">Demote players within a clan</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.demote &ltping/username&gt</p>
+          <p class="bottom-italics">.demote @Huntail777#4311</p>
+          <p class="bottom-italics">.demote Huntail777#4311</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>Only usable by Trusted Members and Leaders</li>
+            <li>Can be used to kick Members from a clan</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">kick</p>
+          <p class="description">Kick players from a clan</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.kick &ltping/username&gt</p>
+          <p class="bottom-italics">.kick @Huntail777#4311</p>
+          <p class="bottom-italics">.kick Huntail777#4311</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>Only usable by Trusted Members and Leaders</li>
           </ul>
         </div>
       </div>
