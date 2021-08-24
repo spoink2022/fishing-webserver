@@ -1,7 +1,9 @@
-const PROD = true;
+const PROD = false;
 
 const Global = require('./global.js');
 const config = require('./private/config.json');
+
+const fetch = require('node-fetch');
 
 const fs = require('fs');
 const http = require('http');
@@ -31,14 +33,53 @@ if (PROD) {
   });
 }
 
-app.use(favicon('public/images/favicon.ico'))
+app.use(favicon('public/images/favicon.ico'));
 
-app.get('/', (req, res) => {
+app.use('/shop', async (req, res, next) => {
+  const code = req.query.code;
+  if (code) {
+    try {
+			const oauthResult = await fetch('https://discord.com/api/oauth2/token', {
+				method: 'POST',
+				body: new URLSearchParams({
+					client_id: config.clientId,
+					client_secret: config.clientSecret,
+					code,
+					grant_type: 'authorization_code',
+					redirect_uri: `${config.domain}/shop`,
+					scope: 'identify',
+				}),
+				headers: {
+					'Content-Type': 'application/x-www-form-urlencoded',
+				},
+			});
+
+			const oauthData = await oauthResult.json();
+
+      const userResultRaw = await fetch('https://discord.com/api/users/@me', {
+        headers: {
+          authorization: `${oauthData.token_type} ${oauthData.access_token}`
+        }
+      });
+      const userResult = await userResultRaw.json();
+
+			res.locals.user = userResult;
+		} catch (error) {
+			// NOTE: An unauthorized token will not throw an error;
+			// it will return a 401 Unauthorized response in the try block above
+			console.error(error);
+		}
+  }
+  next();
+});
+
+app.get('/', async (req, res) => {
   const stats = Global.getStats();
   res.render('main.ejs', {fish: stats.fishCaught, weight: stats.tonsCaught});
 });
 
 app.get('/commands', (req, res) => {
+  console.log(res.locals);
   res.render('commands.ejs', {preset: null});
 });
 app.get('/commands/*', (req, res) => {
@@ -50,8 +91,21 @@ app.get('/start', (req, res) => {
 });
 
 app.get('/advanced', (req, res) => {
-  console.log(req);
   res.render('advanced.ejs');
+});
+
+app.get('/shop', (req, res) => {
+  let user = null;
+  if (res.locals.user && res.locals.user.id) {
+    let userResult = res.locals.user;
+    user = {
+      id: userResult.id,
+      tag: userResult.username + '#' + userResult.discriminator,
+      avatarUrl: `https://cdn.discordapp.com/avatars/${userResult.id}/${userResult.avatar}.png`
+    };
+  }
+  console.log(user);
+  res.render('shop.ejs', {user: user});
 });
 
 let httpServer = http.createServer(app);
