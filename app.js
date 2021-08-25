@@ -1,8 +1,7 @@
-const PROD = false;
-
 const Global = require('./global.js');
 const db = require('./db');
 const config = require('./private/config.json');
+const PROD = config.PROD;
 
 const fetch = require('node-fetch');
 
