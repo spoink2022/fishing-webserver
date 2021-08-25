@@ -171,7 +171,6 @@ async function fulfillOrder(session) {
 }
 
 app.post('/webhook', bodyParser.raw({type: 'application/json'}), async (req, res) => {
-  console.log('RECEIVED A WEBHOOK');
   const payload = req.body;
 
   // Handle the checkout.session.completed event
