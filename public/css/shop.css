@@ -1,0 +1,140 @@
+#logo { filter: brightness(100%); }
+#logo:hover { border-radius: 32px; cursor: default; }
+#discordName {
+  font-size: 20px;
+  position: fixed;
+  top: 54px;
+  left: 112px;
+  color: #C4C4C4;
+  text-decoration: none;
+}
+#logout { color: #21afff; text-decoration: none; }
+#logout:hover { color: #0095eb; }
+
+#title {
+  width: 50%;
+  position: absolute;
+  left: 50%;
+  top: 11%;
+  text-align: center;
+  transform: translateX(-50%);
+}
+
+#title h1 {
+  font-family: "Prompt";
+  font-size: 96px;
+  font-weight: 700;
+  letter-spacing: 6px;
+  text-shadow: 0px 4px #21afff;
+}
+
+#title h2 {
+  font-size: 40px;
+  font-weight: 300;
+  font-style: italic;
+  color: #c4c4c4;
+  margin-top: -8px;
+}
+
+#shop {
+  width: 70vw;
+  position: absolute;
+  left: 50%;
+  top: 33%;
+  transform: translateX(-50%);
+}
+
+.item {
+  position: relative;
+  display: inline-block;
+  width: 30%;
+  margin: 1.45%;
+  height: 280px;
+  border-radius: 16px;
+  background-color: #16161D;
+  border: 1px solid transparent;
+}
+
+.item:hover {
+  border: 1px solid #21afff;
+  transition: 0.2s border-color;
+}
+
+.counter {
+  user-select: none;
+  position: absolute;
+  bottom: 24px;
+  right: 16px;
+  border-radius: 0 0 16px 16px;
+  width: 100%;
+  height: 48px;
+}
+
+.price {
+  letter-spacing: 1px;
+  position: absolute;
+  bottom: 28px;
+  left: 32px;
+  font-family: "Recursive";
+  font-size: 20px;
+  color: white;
+  font-weight: 400;
+}
+
+.counter div {
+  float: right;
+  margin: 4px;
+  font-size: 18px;
+  display: inline-block;
+  height: 100%;
+  width: 48px;
+  line-height: 48px;
+  border: 2px solid #21AFFF;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.add:hover, .subtract:hover{
+  cursor: pointer;
+  background-color: #21AFFF;
+  transition: 0.3s background-color;
+}
+
+.name {
+  letter-spacing: 1px;
+  font-size: 32px;
+  font-family: "Prompt";
+  text-align: center;
+  margin: 32px 0 12px;
+}
+
+ul { padding: 0 32px 0 64px; }
+li {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #C4C4C4;
+}
+
+#checkout, #login {
+  color: white;
+  font-family: "Recursive";
+  font-size: 18px;
+  width: 256px;
+  height: 64px;
+  background-color: transparent;
+  border: 2px solid #21AFFF;
+  border-radius: 32px;
+  position: relative;
+  bottom: -64px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.3s background-color;
+  margin-bottom: 256px;
+}
+
+#checkout:hover, #login:hover {
+  cursor: pointer;
+  background-color: #21AFFF;
+}
+
+input { display: none; }
