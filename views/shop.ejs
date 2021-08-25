@@ -23,7 +23,8 @@
       gtag('config', 'G-DDRVK2WS87');
 
       const username = '<%= username %>';
-      const avatarUrl = '<%= avatarUrl %>';
+      const discordAuthUrl = '<%= discordAuthUrl %>';
+
     </script>
     <script src="../js/global.js"></script>
     <script src="../js/shop.js"></script>
@@ -45,10 +46,10 @@
       <a href="/shop" class="selected-link">Big Tuna Shop</a>
     </navbar>
 
-    <div id="title"><h1>SHOP</h1><h2>Testing: DO NOT USE</h2></div>
+    <div id="title"><h1>SHOP</h1><h2>Welcome to the Big Tuna shop! Here you can support your favorite fishing bot by purchasing various cool perks and cosmetic changes. Thanks for acknowledging our hard work!</h2></div>
 
     <form id="shop" action="/create-checkout-session" method="post">
-      <input name="userid" value="<%= username ? userid : null %>">
+      <input name="userid" value="<%= userid %>">
 
       <div class="item">
         <h2 class="name">+1 Day Hosting</h2>
@@ -82,7 +83,7 @@
         </div>
       </div>
 
-      <div class="item" style="opacity: 0">
+      <div class="item hidden">
         <h2 class="name">Item</h2>
         <ul>
           <li></li>
@@ -99,7 +100,7 @@
       </div>
 
       <a href="<%= discordAuthUrl %>"><button id="login" type="button">Login</button></a>
-      <button id="checkout" type="submit">Checkout</button>
+      <button id="checkout" type="button" style="opacity: 0.5">Checkout</button>
 
       <div id="footer">
         <div class="footerColumn">

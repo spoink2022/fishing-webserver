@@ -1,12 +1,13 @@
-#logo { filter: brightness(100%); }
+#logo { filter: brightness(100%); position: absolute; }
 #logo:hover { border-radius: 32px; cursor: default; }
 #discordName {
   font-size: 20px;
-  position: fixed;
+  position: absolute;
   top: 54px;
   left: 112px;
   color: #C4C4C4;
   text-decoration: none;
+  z-index: 4;
 }
 #logout { color: #21afff; text-decoration: none; }
 #logout:hover { color: #0095eb; }
@@ -29,9 +30,8 @@
 }
 
 #title h2 {
-  font-size: 40px;
-  font-weight: 300;
-  font-style: italic;
+  font-size: 20px;
+  font-weight: 400;
   color: #c4c4c4;
   margin-top: -8px;
 }
@@ -40,7 +40,7 @@
   width: 70vw;
   position: absolute;
   left: 50%;
-  top: 33%;
+  top: 35%;
   transform: translateX(-50%);
 }
 
@@ -48,7 +48,7 @@
   position: relative;
   display: inline-block;
   width: 30%;
-  margin: 1.45%;
+  margin: 1.44%;
   height: 280px;
   border-radius: 16px;
   background-color: #16161D;
@@ -137,4 +137,105 @@ li {
   background-color: #21AFFF;
 }
 
+#checkout[type="button"]:hover {
+  cursor: default;
+  background-color: transparent;
+}
+
 input { display: none; }
+.hidden { opacity: 0; }
+
+@media only screen and (max-width: 1440px) {
+  #title { width: 60%; }
+  #title h1 { font-size: 80px; }
+  #title h2 { font-size: 16px;}
+  #shop {
+    top: 40%;
+    width: 90vw;
+  }
+  .item { height: 256px; }
+  .name { font-size: 28px; }
+  ul { padding: 0 24px 0 48px; }
+  li { font-size: 14px; }
+  .counter { height: 40px; }
+  .counter div {
+    width: 40px;
+    font-size: 16px;
+    line-height: 40px;
+  }
+  .price { bottom: 20px; }
+  #checkout, #login {
+    bottom: -32px;
+    margin-bottom: 150px;
+    width: 200px;
+    height: 60px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  #title { width: 70%; }
+  #title h1 { font-size: 64px; }
+  #title h2 { font-size: 14px; }
+  #discordName { font-size: 16px; }
+  #shop { width: 95vw; }
+  .item { margin: 1.3%; height: 200px; }
+  .name { font-size: 24px; margin: 16px 0 8px; }
+  ul { padding: 0 16px 0 32px; }
+  li { font-size: 12px; }
+  .counter { height: 32px; }
+  .counter div {
+    width: 32px;
+    font-size: 14px;
+    line-height: 32px;
+  }
+  .price { font-size: 16px; }
+  #checkout, #login {
+    bottom: -16px;
+    margin-bottom: 128px;
+    width: 150px;
+    height: 50px;
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #logo { display: block; }
+  #shop { width: 80vw; top: 30%; }
+  #title h1 { font-size: 80px; }
+  #title h2 { font-size: 16px;}
+  .item {
+    width: 100%;
+    height: 256px;
+    margin: 0 0 32px 0;
+  }
+  .name { font-size: 32px; margin: 32px 0 12px; }
+  ul { padding: 0 32px 0 64px; }
+  li { font-size: 16px; }
+  .price { font-size: 20px; bottom: 28px; }
+  .counter { height: 48px; }
+  .counter div { width: 48px; font-size: 18px; line-height: 48px; }
+  #checkout, #login {
+    bottom: -32px;
+    width: 256px;
+    height: 64px;
+  }
+  .hidden { display: none; }
+}
+
+@media only screen and (max-width: 420px) {
+  #title { top: 13%; }
+  #title h1 { font-size: 64px; }
+  #title h2 { display: none; }
+  #shop { top: 30%; }
+  .name { font-size: 28px; margin: 16px 0 12px; }
+  .item { height: 240px; }
+  ul { padding: 0 20px 0 44px; }
+  li { font-size: 13px; }
+  .price { font-size: 18px; bottom: 24px; }
+  .counter { height: 40px; }
+  .counter div {
+    width: 40px;
+    font-size: 14px;
+    line-height: 40px;
+  }
+}

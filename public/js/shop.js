@@ -3,7 +3,6 @@ onload = function() {
 
   let avatar = document.getElementById('logo');
   if (username) {
-    avatar.src = avatarUrl;
     document.getElementById('login').style.display = 'none';
     document.getElementById('discordName').innerHTML = username + ' | <a id="logout" href="/shop">Logout</a>';
   } else {
@@ -11,12 +10,18 @@ onload = function() {
     document.getElementById('checkout').style.display = 'none';
   }
 
+  let total = 0, checkout = document.getElementById('checkout');
+
   document.querySelectorAll('.add').forEach(element => {
     element.addEventListener('click', event => {
+      if (total == 0) { checkout.setAttribute('type', 'submit'); checkout.style.opacity = '1'; }
+
       let temp = event.target.parentNode.children;
       let display = temp.item(1), form = temp.item(2);
       display.innerHTML = Number(display.innerHTML) + 1;
       form.value = Number(form.value) + 1;
+
+      total += 1;
     });
   });
 
@@ -27,6 +32,9 @@ onload = function() {
       if (form.value != 0) {
         display.innerHTML = Number(display.innerHTML) - 1;
         form.value = Number(form.value) - 1;
+
+        total -= 1;
+        if (total == 0) { checkout.setAttribute('type', 'button'); checkout.style.opacity = '0.5'; }
       }
     });
   });
