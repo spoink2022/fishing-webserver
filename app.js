@@ -12,8 +12,9 @@ const https = require('https');
 if (PROD) {
   var privateKey  = fs.readFileSync('/etc/letsencrypt/live/bigtuna.xyz/privkey.pem', 'utf8');
   var certificate = fs.readFileSync('/etc/letsencrypt/live/bigtuna.xyz/cert.pem', 'utf8');
+  var chain = fs.readFileSync('/etc/letsencrypt/live/bigtuna.xyz/chain.pem', 'utf8');
 
-  var credentials = {key: privateKey, cert: certificate};
+  var credentials = {key: privateKey, cert: certificate, ca: chain};
 }
 
 const bodyParser = require('body-parser');
