@@ -62,6 +62,7 @@ app.use('/shop', async (req, res, next) => {
 			});
 
 			const oauthData = await oauthResult.json();
+      console.log(oauthData);
 
       const userResultRaw = await fetch('https://discord.com/api/users/@me', {
         headers: {
@@ -71,6 +72,8 @@ app.use('/shop', async (req, res, next) => {
       const userResult = await userResultRaw.json();
 
 			res.locals.user = userResult;
+
+      console.log(userResult);
 		} catch (error) {
 			// NOTE: An unauthorized token will not throw an error;
 			// it will return a 401 Unauthorized response in the try block above
