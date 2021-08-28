@@ -181,7 +181,7 @@ app.post('/webhook', bodyParser.raw({type: 'application/json'}), async (req, res
     fulfillOrder(session);
   }
 
-  res.status(200);
+  res.json({received: true});
 });
 
 // HTTPS CONFIG
