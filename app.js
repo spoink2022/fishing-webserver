@@ -155,7 +155,8 @@ app.post('/create-checkout-session', async (req, res) => {
 
 const PRODUCT_MAP = {
   oneDayHost: 'one_day_host',
-  oneWeekHost: 'one_week_host'
+  oneWeekHost: 'one_week_host',
+  customFish: 'custom_fish'
 };
 
 async function fulfillOrder(session) {
