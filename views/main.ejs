@@ -32,10 +32,6 @@
   <script src="../js/countup.js"></script>
   <script src="../js/global.js"></script>
   <script src="../js/main.js"></script>
-  <script>
-    var socket = io();
-    socket.on('catch', updatedStats => updatePageStats(updatedStats.fish, updatedStats.tons) );
-  </script>
 </head>
 <body>
   <div id="cover"></div>

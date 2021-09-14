@@ -1,4 +1,4 @@
-let fishCaughtText, tonsCaughtText;
+let fishCaughtText, tonsCaughtText, socket;
 let countUpDone = false;
 
 const easingFn = function (t, b, c, d) {
@@ -12,7 +12,6 @@ const updatePageStats = function(fishCaught, tonsCaught) {
     fishCaughtText.innerHTML = fishCaught;
     tonsCaughtText.innerHTML = tonsCaught;
   }
-  console.log('pootat');
 }
 
 const onCountUpDone = function() {
@@ -52,6 +51,9 @@ onload = function() {
       if (screen.width > 768) element.style.transform = `translateY(${(1 - opacity) * 200}px)`
     }
   });
+
+  socket = io();
+  socket.on('catch', updatedStats => updatePageStats(updatedStats.fish, updatedStats.tons) );
 
   fishCaughtText = document.getElementById('fishCaught');
   tonsCaughtText = document.getElementById('tonsCaught');
