@@ -203,6 +203,7 @@ app.post('/webhook', bodyParser.raw({type: 'application/json'}), async (req, res
 // WEBSOCKET HANDLING
 io.on('connection', (socket) => {
   socket.on('catch', (data) => {
+    console.log('fish catch!');
     Global.setVariables(data.fish, data.tons);
     io.emit('catch', data);
   });
