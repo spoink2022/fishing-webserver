@@ -5,7 +5,7 @@ let tonsCaught;
 
 updateVariables();
 
-setInterval(updateVariables, 300000);
+//setInterval(updateVariables, 300000);
 
 async function updateVariables() {
     fishCaught = await db.stats.fetchFishCaught();
@@ -13,9 +13,14 @@ async function updateVariables() {
     tonsCaught = Math.round(tonsCaught/1000) / 1000;
 }
 
+module.exports.setVariables = async function(fish, tons) {
+    fishCaught = fish;
+    tonsCaught = tons;
+}
+
 module.exports.getStats = function() {
     return {
-        fishCaught: fishCaught,
+        fishCaught: parseInt(fishCaught),
         tonsCaught: tonsCaught
     };
 }

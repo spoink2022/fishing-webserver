@@ -1,7 +1,22 @@
+let fishCaughtText, tonsCaughtText;
+let countUpDone = false;
+
 const easingFn = function (t, b, c, d) {
   var ts = (t /= d) * t;
   var tc = ts * t;
   return b + c * (tc + -3 * ts + 3 * t);
+}
+
+const updatePageStats = function(fishCaught, tonsCaught) {
+  if (countUpDone) {
+    fishCaughtText.innerHTML = fishCaught;
+    tonsCaughtText.innerHTML = tonsCaught;
+  }
+  console.log('pootat');
+}
+
+const onCountUpDone = function() {
+  countUpDone = true;
 }
 
 onload = function() {
@@ -20,7 +35,7 @@ onload = function() {
   document.getElementById('cover').remove();
   let count1 = new CountUp('fishCaught', 0, fishCaught, 0, 2, { easingFn, separator: '' }); // add suffix: 'k' if it gets too big
   let count2 = new CountUp('tonsCaught', 0, tonsCaught, 3, 2, { easingFn });
-  count1.start();
+  count1.start(onCountUpDone);
   count2.start();
   const element = document.getElementById('top');
   window.addEventListener('scroll', function() {
@@ -37,4 +52,7 @@ onload = function() {
       if (screen.width > 768) element.style.transform = `translateY(${(1 - opacity) * 200}px)`
     }
   });
+
+  fishCaughtText = document.getElementById('fishCaught');
+  tonsCaughtText = document.getElementById('tonsCaught');
 }

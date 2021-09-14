@@ -24,13 +24,18 @@
   </script>
   
   <script>
-    const fishCaught = <%= fish %>;
-    const tonsCaught = <%= weight %>;
+    let fishCaught = <%= fish %>;
+    let tonsCaught = <%= weight %>;
   </script>
   <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="/socket.io/socket.io.js"></script>
   <script src="../js/countup.js"></script>
   <script src="../js/global.js"></script>
   <script src="../js/main.js"></script>
+  <script>
+    var socket = io();
+    socket.on('catch', updatedStats => updatePageStats(updatedStats.fish, updatedStats.tons) );
+  </script>
 </head>
 <body>
   <div id="cover"></div>

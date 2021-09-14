@@ -4,10 +4,19 @@ const config = require('./private/config.json');
 const PROD = config.PROD;
 
 const fetch = require('node-fetch');
+const { Server, Socket } = require('socket.io');
+const { sendUpdatedMainPageStats } = require('./lib/websocket.js');
 
 const fs = require('fs');
 const http = require('http');
 const https = require('https');
+
+const favicon = require('serve-favicon');
+const bodyParser = require('body-parser');
+const express = require('express');
+const app = express();
+
+const stripe = require('stripe')(config.stripe.secretKey);
 
 if (PROD) {
   var privateKey  = fs.readFileSync('/etc/letsencrypt/live/bigtuna.xyz/privkey.pem', 'utf8');
@@ -17,14 +26,20 @@ if (PROD) {
   var credentials = {key: privateKey, cert: certificate, ca: chain};
 }
 
-const bodyParser = require('body-parser');
-const express = require('express');
-const app = express();
+// HTTPS CONFIG, WEBSOCKETS
+let httpServer = http.createServer(app);
+httpServer.listen(config.HTTP_PORT);
+console.log(`Listening: http on port ${config.HTTP_PORT}`);    
 
-const favicon = require('serve-favicon');
+if (PROD) {
+  let httpsServer = https.createServer(credentials, app);
+  httpsServer.listen(config.HTTPS_PORT);
+  console.log(`Listening: https on port ${config.HTTPS_PORT}`);
+}
 
-const stripe = require('stripe')(config.stripe.secretKey);
+const io = new Server(httpServer);
 
+// EXPRESS
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.use(express.json({verify: (req,res,buf) => { req.rawBody = buf }}));
@@ -185,13 +200,10 @@ app.post('/webhook', bodyParser.raw({type: 'application/json'}), async (req, res
   res.json({received: true});
 });
 
-// HTTPS CONFIG
-let httpServer = http.createServer(app);
-httpServer.listen(config.HTTP_PORT);
-console.log(`Listening: http on port ${config.HTTP_PORT}`);    
-
-if (PROD) {
-  let httpsServer = https.createServer(credentials, app);
-  httpsServer.listen(config.HTTPS_PORT);
-  console.log(`Listening: https on port ${config.HTTPS_PORT}`);
-}
+// WEBSOCKET HANDLING
+io.on('connection', (socket) => {
+  socket.on('catch', (data) => {
+    Global.setVariables(data.fish, data.tons);
+    io.emit('catch', data);
+  });
+});
