@@ -31,13 +31,16 @@ let httpServer = http.createServer(app);
 httpServer.listen(config.HTTP_PORT);
 console.log(`Listening: http on port ${config.HTTP_PORT}`);    
 
+let io;
 if (PROD) {
   let httpsServer = https.createServer(credentials, app);
   httpsServer.listen(config.HTTPS_PORT);
   console.log(`Listening: https on port ${config.HTTPS_PORT}`);
-}
 
-const io = new Server(httpServer);
+  io = new Server(httpsServer);
+} else {
+  io = new Server(httpServer);
+}
 
 // EXPRESS
 app.use(bodyParser.urlencoded({extended: false}));
