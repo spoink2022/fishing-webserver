@@ -10,7 +10,7 @@ const easingFn = function (t, b, c, d) {
 const updatePageStats = function(fishCaught, tonsCaught) {
   if (countUpDone) {
     fishCaughtText.innerHTML = fishCaught;
-    tonsCaughtText.innerHTML = tonsCaught;
+    tonsCaughtText.innerHTML = tonsCaught.toFixed(3);
   }
 }
 

@@ -72,7 +72,7 @@
         <div class="bottom">
           <hr>
           <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.fish &ltbait (optional)&gt</p>
+          <p class="bottom-text">.fish [bait (optional)]</p>
           <p class="bottom-italics">.fish</p>
           <p class="bottom-italics">.fish worms</p>
           <p class="bottom-header">Other Information</p>
@@ -92,7 +92,7 @@
         <div class="bottom">
           <hr>
           <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.aquarium &ltnumber (optional)&gt</p>
+          <p class="bottom-text">.aquarium [number (optional)]</p>
           <p class="bottom-italics">.aquarium</p>
           <p class="bottom-italics">.aquarium 2</p>
           <p class="bottom-header">Other Information</p>
@@ -146,7 +146,7 @@
         <div class="bottom">
           <hr>
           <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.setlocation &ltnumber&gt</p>
+          <p class="bottom-text">.setlocation [number]</p>
           <p class="bottom-italics">.setlocation 1</p>
           <p class="bottom-italics">.setlocation 3</p>
           <p class="bottom-header">Other Information</p>
@@ -229,13 +229,13 @@
 
       <div class="command">
         <div class="top" onclick="expand(this)">
-          <p class="command-name">cards</p>
+          <p class="command-name">card</p>
           <p class="description">View and interact with your fish cards</p>
         </div>
         <div class="bottom">
           <hr>
           <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.card &ltID (optional)&gt</p>
+          <p class="bottom-text">.card [ID (optional)]</p>
           <p class="bottom-italics">.card</p>
           <p class="bottom-italics">.card 48</p>
           <p class="bottom-header">Other Information</p>
@@ -248,17 +248,54 @@
 
       <div class="command">
         <div class="top" onclick="expand(this)">
+          <p class="command-name">givecard</p>
+          <p class="description">Give a fish card to another player</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.givecard [card ID] [@user]</p>
+          <p class="bottom-italics">.givecard 59 @Huntail777#4311</p>  
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>Cards must be given to players level 20 or above</li>
+            <li>Also accepts <span class="command-highlight">.gc</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
           <p class="command-name">ring</p>
           <p class="description">View and interact with your rings</p>
         </div>
         <div class="bottom">
           <hr>
           <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.ring &ltID (optional)&gt</p>
+          <p class="bottom-text">.ring [ID (optional)]</p>
           <p class="bottom-header">Other Information</p>
           <ul>
             <li>This command is not needed until you reach level 20, when you unlock rings</li>
             <li>Also accepts <span class="command-highlight">.rings</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">givering</p>
+          <p class="description">Give a ring to another player</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.givering [ring ID] [@user]</p>
+          <p class="bottom-italics">.givering 25 @Huntail777#4311</p>  
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>Rings must be given to players level 20 or above</li>
+            <li>The sell price of given rings becomes 0</li>
+            <li>Also accepts <span class="command-highlight">.gr</span></li>
           </ul>
         </div>
       </div>
@@ -359,7 +396,7 @@
         <div class="bottom">
           <hr>
           <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.fishleaderboards &ltfish&gt</p>
+          <p class="bottom-text">.fishleaderboards [fish]</p>
           <p class="bottom-header">Other Information</p>
           <ul>
             <li>Ranking is based on best caught fish of a species</li>
@@ -391,7 +428,7 @@
         <div class="bottom">
           <hr>
           <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.info &ltcommand (optional)&gt</p>
+          <p class="bottom-text">.info [command (optional)]</p>
           <p class="bottom-italics">.info</p>
           <p class="bottom-italics">.info baitshop</p>
           <p class="bottom-header">Other Information</p>
@@ -410,7 +447,7 @@
         <div class="bottom">
           <hr>
           <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.iteminfo &ltitem/bait&gt</p>
+          <p class="bottom-text">.iteminfo [item/bait]</p>
           <p class="bottom-italics">.iteminfo leeches</p>
           <p class="bottom-italics">.iteminfo wooden rod</p>
           <p class="bottom-italics">.iteminfo grass line</p>
@@ -433,7 +470,7 @@
         <div class="bottom">
           <hr>
           <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.fishinfo &ltfish&gt</p>
+          <p class="bottom-text">.fishinfo [fish]</p>
           <p class="bottom-italics">.fishinfo bluegill</p>
           <p class="bottom-italics">.fishinfo rainbow trout</p>
           <p class="bottom-header">Other Information</p>
@@ -452,7 +489,7 @@
         <div class="bottom">
           <hr>
           <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.locationinfo &ltnumber (optional)&gt</p>
+          <p class="bottom-text">.locationinfo [number (optional)]</p>
           <p class="bottom-italics">.locationinfo</p>
           <p class="bottom-italics">.locationinfo 1</p>
           <p class="bottom-italics">.locationinfo 3</p>
@@ -542,7 +579,7 @@
         <div class="bottom">
           <hr>
           <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.rename &ltnew name&gt</p>
+          <p class="bottom-text">.rename [new name]</p>
           <p class="bottom-italics">.rename The Big Fishers</p>
           <p class="bottom-header">Other Information</p>
           <ul>
@@ -562,7 +599,7 @@
         <div class="bottom">
           <hr>
           <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.join &ltClan ID&gt &ltpassword (optional)&gt</p>
+          <p class="bottom-text">.join [Clan ID] [password (optional)]</p>
           <p class="bottom-italics">.join 14</p>
           <p class="bottom-italics">.join 73 xyslkg</p>
           <p class="bottom-header">Other Information</p>
@@ -649,7 +686,7 @@
         <div class="bottom">
           <hr>
           <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.promote &ltping/username&gt</p>
+          <p class="bottom-text">.promote [ping/username]</p>
           <p class="bottom-italics">.promote @Huntail777#4311</p>
           <p class="bottom-italics">.promote Huntail777#4311</p>
           <p class="bottom-header">Other Information</p>
@@ -668,7 +705,7 @@
         <div class="bottom">
           <hr>
           <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.demote &ltping/username&gt</p>
+          <p class="bottom-text">.demote [ping/username]</p>
           <p class="bottom-italics">.demote @Huntail777#4311</p>
           <p class="bottom-italics">.demote Huntail777#4311</p>
           <p class="bottom-header">Other Information</p>
@@ -687,7 +724,7 @@
         <div class="bottom">
           <hr>
           <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.kick &ltping/username&gt</p>
+          <p class="bottom-text">.kick [ping/username]</p>
           <p class="bottom-italics">.kick @Huntail777#4311</p>
           <p class="bottom-italics">.kick Huntail777#4311</p>
           <p class="bottom-header">Other Information</p>
@@ -708,7 +745,7 @@
         <div class="bottom">
           <hr>
           <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.toggle &ltoption&gt</p>
+          <p class="bottom-text">.toggle [option]</p>
           <p class="bottom-header">Other Information</p>
           <ul>
             <li><span class="command-highlight">.toggle startinfo</span> toggles whether members receive a message from Big Tuna when they join your server</li>
@@ -724,7 +761,7 @@
         <div class="bottom">
           <hr>
           <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.setprefix &ltprefix&gt</p>
+          <p class="bottom-text">.setprefix [prefix]</p>
           <p class="bottom-header">Other Information</p>
           <ul>
             <li>If you forget your prefix, ping Big Tuna</li>
@@ -741,7 +778,7 @@
         <div class="bottom">
           <hr>
           <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.setcustomfish &ltalias&gt</p>
+          <p class="bottom-text">.setcustomfish [alias]</p>
           <p class="bottom-italics">.setcustomfish potato</p>
           <p class="bottom-italics">.setcustomfish 1</p>
           <p class="bottom-header">Other Information</p>
@@ -769,6 +806,23 @@
           <p class="bottom-header">Other Information</p>
           <ul>
             <li>Your unused redeems will show up in <span class="command-highlight">.stats</span></li>
+            <li>Purchased from the Big Tuna Shop</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">givepremium</p>
+          <p class="description">Give extra Big Supporter perks to other players</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.givepremium [@user]</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>Your unused supporter gifts will show up in <span class="command-highlight">.stats</span></li>
             <li>Purchased from the Big Tuna Shop</li>
           </ul>
         </div>
