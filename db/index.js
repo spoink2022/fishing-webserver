@@ -1,2 +1,1 @@
-module.exports.stats = require('./stats.js');
-module.exports.purchases = require('./purchases.js');
+module.exports.users = require('./users.js');

@@ -53,7 +53,7 @@ onload = function() {
   });
 
   socket = io();
-  socket.on('catch', updatedStats => updatePageStats(updatedStats.fish, updatedStats.tons) );
+  socket.on('catch', updatedStats => updatePageStats(updatedStats.fishCaught, updatedStats.tonsCaught) );
 
   fishCaughtText = document.getElementById('fishCaught');
   tonsCaughtText = document.getElementById('tonsCaught');

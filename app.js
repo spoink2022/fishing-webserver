@@ -172,8 +172,8 @@ app.post('/create-checkout-session', async (req, res) => {
 });
 
 const PRODUCT_MAP = {
-  oneDayHost: 'one_day_host',
-  oneWeekHost: 'one_week_host',
+  oneDayHost: 'supporter',
+  oneWeekHost: 'big_supporter',
   customFish: 'custom_fish'
 };
 
@@ -185,7 +185,7 @@ async function fulfillOrder(session) {
   for (let purchase of purchases) {
     let product = purchase.split(':')[0];
     let qt = parseInt(purchase.split(':')[1]);
-    await db.purchases.updateColumn(userid, PRODUCT_MAP[product], qt);
+    await db.users.updateColumn(userid, PRODUCT_MAP[product], qt);
   }
 }
 
@@ -206,7 +206,7 @@ app.post('/webhook', bodyParser.raw({type: 'application/json'}), async (req, res
 // WEBSOCKET HANDLING
 io.on('connection', (socket) => {
   socket.on('catch', (data) => {
-    Global.setVariables(data.fish, data.tons);
-    io.emit('catch', data);
+    Global.updateVariables(data.fish, data.kg);
+    io.emit('catch', Global.getStats());
   });
 });
