@@ -182,6 +182,7 @@ async function fulfillOrder(session) {
   console.log('Fulfilling order...', purchases);
   
   let userid = purchases.shift(); // remove the first element and assign it to userid
+  io.emit('purchase', { userid: userid, data: purchases });
   for (let purchase of purchases) {
     let product = purchase.split(':')[0];
     let qt = parseInt(purchase.split(':')[1]);
