@@ -53,52 +53,35 @@
   <div id="main">
     <h1 id="title">COMMANDS</h1>
     <p id="subtitle">An updated collection of commands for the Big Tuna discord fishing bot</p>
+    <p id="subtitle">Both slash commands and text commands are supported</p>
+    <p id="subtitle"><br>[] = optional entry</p>
+    <p id="subtitle">&lt&gt = mandatory entry</p>
     
     <div id="type-selector">
-      <p class="selected">gameplay</p>
-      <p>statistics</p>
-      <p>information</p>
-      <p>clans</p>
-      <p>mods</p>
-      <p>other</p>
+      <p class="selected">basic</p>
+      <p>advanced</p>
+      <p>rankings</p>
+      <p>clan</p>
+      <p>special</p>
     </div>
 
-    <div class="category visible" id="gameplay">
-      <div class="command">
-        <div class="top" onclick="expand(this)">
-          <p class="command-name">fish</p>
-          <p class="description">Cast your line and see what you catch!</p>
-        </div>
-        <div class="bottom">
-          <hr>
-          <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.fish [bait (optional)]</p>
-          <p class="bottom-italics">.fish</p>
-          <p class="bottom-italics">.fish worms</p>
-          <p class="bottom-header">Other Information</p>
-          <ul>
-            <li>React with the hook icon or wait 10 seconds to see your catch</li>
-            <li>The fish you catch will be near your hook</li>
-            <li>Also accepts <span class="command-highlight">.f</span></li>
-          </ul>
-        </div>
-      </div>
-
+    <div class="category visible" id="basic">
       <div class="command">
         <div class="top" onclick="expand(this)">
           <p class="command-name">aquarium</p>
-          <p class="description">View and collect coins from your collection of fish</p>
+          <p class="description">Check one of your aquariums</p>
         </div>
         <div class="bottom">
           <hr>
           <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.aquarium [number (optional)]</p>
+          <p class="bottom-text">.aquarium [location] [user]</p>
           <p class="bottom-italics">.aquarium</p>
-          <p class="bottom-italics">.aquarium 2</p>
+          <p class="bottom-italics">.aquarium 5</p>
+          <p class="bottom-italics">.aquarium 5 @huntail777</p>
           <p class="bottom-header">Other Information</p>
           <ul>
-            <li>React with the coin icon to collect your coins</li>
-            <li>The number you choose defaults to your current location if a value is not provided</li>
+            <li>Includes an image of your aquarium</li>
+            <li>If no location is provided, it will show your current location</li>
             <li>Also accepts <span class="command-highlight">.a</span></li>
           </ul>
         </div>
@@ -106,8 +89,44 @@
 
       <div class="command">
         <div class="top" onclick="expand(this)">
+          <p class="command-name">aquariums</p>
+          <p class="description">Check all of your aquariums</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.aquarium [user]</p>
+          <p class="bottom-italics">.aquariums</p>
+          <p class="bottom-italics">.aquariums @huntail777</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>Includes overall coin generation</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">buy</p>
+          <p class="description">Purchase an item from the shop</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.buy &ltequipment&gt</p>
+          <p class="bottom-italics">.buy rod</p>
+          <p class="bottom-italics">.buy hook</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>The shop to buy from can be viewed with <span class="command-highlight">.shop</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
           <p class="command-name">collect</p>
-          <p class="description">Conveniently collects the coins from your aquariums</p>
+          <p class="description">Collect coins from your aquariums</p>
         </div>
         <div class="bottom">
           <hr>
@@ -115,6 +134,8 @@
           <p class="bottom-text">.collect</p>
           <p class="bottom-header">Other Information</p>
           <ul>
+            <li>This is the only way to collect coins from your aquariums</li>
+            <li>Collects from all of your aquariums at once</li>
             <li>Also accepts <span class="command-highlight">.c</span></li>
           </ul>
         </div>
@@ -122,232 +143,15 @@
 
       <div class="command">
         <div class="top" onclick="expand(this)">
-          <p class="command-name">shop</p>
-          <p class="description">Presents the shop page, where you can upgrade your stuff</p>
-        </div>
-        <div class="bottom">
-          <hr>
-          <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.shop</p>
-          <p class="bottom-header">Other Information</p>
-          <ul>
-            <li>A lock icon means you are not a high enough level to buy an item</li>
-            <li>A credit card icon means you don’t have enough coins to buy an item</li>
-            <li>A number icon represents the number you must react with to buy an item</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="command">
-        <div class="top" onclick="expand(this)">
-          <p class="command-name">setlocation</p>
-          <p class="description">Sets your fishing location</p>
-        </div>
-        <div class="bottom">
-          <hr>
-          <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.setlocation [number]</p>
-          <p class="bottom-italics">.setlocation 1</p>
-          <p class="bottom-italics">.setlocation 3</p>
-          <p class="bottom-header">Other Information</p>
-          <ul>
-            <li>This command is not needed until you reach level 10, when you unlock the second location</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="command">
-        <div class="top" onclick="expand(this)">
-          <p class="command-name">quest</p>
-          <p class="description">Opens your quest page</p>
-        </div>
-        <div class="bottom">
-          <hr>
-          <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.quest</p>
-          <p class="bottom-header">Other Information</p>
-          <ul>
-            <li>You can renew your quest after it is 3 days old</li>
-            <li>This command is not accessible until you reach level 10</li>
-            <li>Also accepts <span class="command-highlight">.q</span></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="command">
-        <div class="top" onclick="expand(this)">
-          <p class="command-name">bounty</p>
-          <p class="description">Opens the weekly bounty page</p>
-        </div>
-        <div class="bottom">
-          <hr>
-          <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.bounty</p>
-          <p class="bottom-header">Other Information</p>
-          <ul>
-            <li>Bounty rewards can only be acquired once per week</li>
-            <li>The bounty resets weekly at midnight Saturday UTC time</li>
-            <li>This command is not accessible until you reach level 10</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="command">
-        <div class="top" onclick="expand(this)">
-          <p class="command-name">baitshop</p>
-          <p class="description">Presents the bait shop page, where you can buy baits with quest points</p>
-        </div>
-        <div class="bottom">
-          <hr>
-          <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.baitshop</p>
-          <p class="bottom-header">Other Information</p>
-          <ul>
-            <li>The bait shop refreshes every 24 hours, at 12am UTC time</li>
-            <li>This command is not needed until you reach level 10, when you unlock quest points</li>
-            <li>Also accepts <span class="command-highlight">.bs</span></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="command">
-        <div class="top" onclick="expand(this)">
-          <p class="command-name">baits</p>
-          <p class="description">Displays the baits in your inventory</p>
-        </div>
-        <div class="bottom">
-          <hr>
-          <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.baits</p>
-          <p class="bottom-header">Other Information</p>
-          <ul>
-            <li>This command is not needed until you reach level 10, when you unlock quest points</li>
-            <li>Also accepts <span class="command-highlight">.b</span></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="command">
-        <div class="top" onclick="expand(this)">
-          <p class="command-name">card</p>
-          <p class="description">View and interact with your fish cards</p>
-        </div>
-        <div class="bottom">
-          <hr>
-          <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.card [ID (optional)]</p>
-          <p class="bottom-italics">.card</p>
-          <p class="bottom-italics">.card 48</p>
-          <p class="bottom-header">Other Information</p>
-          <ul>
-            <li>This command is not needed until you reach level 20, when you unlock cards</li>
-            <li>Also accepts <span class="command-highlight">.cards</span></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="command">
-        <div class="top" onclick="expand(this)">
-          <p class="command-name">givecard</p>
-          <p class="description">Give a fish card to another player</p>
-        </div>
-        <div class="bottom">
-          <hr>
-          <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.givecard [card ID] [@user]</p>
-          <p class="bottom-italics">.givecard 59 @Huntail777#4311</p>  
-          <p class="bottom-header">Other Information</p>
-          <ul>
-            <li>Cards must be given to players level 20 or above</li>
-            <li>Also accepts <span class="command-highlight">.gc</span></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="command">
-        <div class="top" onclick="expand(this)">
-          <p class="command-name">ring</p>
-          <p class="description">View and interact with your rings</p>
-        </div>
-        <div class="bottom">
-          <hr>
-          <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.ring [ID (optional)]</p>
-          <p class="bottom-header">Other Information</p>
-          <ul>
-            <li>This command is not needed until you reach level 20, when you unlock rings</li>
-            <li>Also accepts <span class="command-highlight">.rings</span></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="command">
-        <div class="top" onclick="expand(this)">
-          <p class="command-name">givering</p>
-          <p class="description">Give a ring to another player</p>
-        </div>
-        <div class="bottom">
-          <hr>
-          <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.givering [ring ID] [@user]</p>
-          <p class="bottom-italics">.givering 25 @Huntail777#4311</p>  
-          <p class="bottom-header">Other Information</p>
-          <ul>
-            <li>Rings must be given to players level 20 or above</li>
-            <li>The sell price of given rings becomes 0</li>
-            <li>Also accepts <span class="command-highlight">.gr</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="category" id="statistics">
-      <div class="command">
-        <div class="top" onclick="expand(this)">
-          <p class="command-name">stats</p>
-          <p class="description">Shows your personal stats</p>
-        </div>
-        <div class="bottom">
-          <hr>
-          <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.stats</p>
-          <p class="bottom-header">Other Information</p>
-          <ul>
-            <li>Also accepts <span class="command-highlight">.s</span></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="command">
-        <div class="top" onclick="expand(this)">
-          <p class="command-name">serverstats</p>
-          <p class="description">Shows stats about the server it was called from</p>
-        </div>
-        <div class="bottom">
-          <hr>
-          <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.serverstats</p>
-          <p class="bottom-header">Other Information</p>
-          <ul>
-            <li>Global ranking is based on total weight caught</li>
-            <li>Also accepts <span class="command-highlight">.ss</span></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="command">
-        <div class="top" onclick="expand(this)">
           <p class="command-name">cooldowns</p>
-          <p class="description">Shows all cooldown information</p>
+          <p class="description">Check your cooldowns</p>
         </div>
         <div class="bottom">
           <hr>
           <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.cooldown</p>
+          <p class="bottom-text">.cooldowns</p>
           <p class="bottom-header">Other Information</p>
           <ul>
-            <li>Will show Time Accumulation for Big Tuna Supporters</li>
             <li>Also accepts <span class="command-highlight">.cd</span></li>
           </ul>
         </div>
@@ -356,16 +160,16 @@
       <div class="command">
         <div class="top" onclick="expand(this)">
           <p class="command-name">equipment</p>
-          <p class="description">Displays your fishing equipment and its capabilities</p>
+          <p class="description">Check your equipment</p>
         </div>
         <div class="bottom">
           <hr>
           <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.equipment</p>
+          <p class="bottom-text">.equipment [user]</p>
+          <p class="bottom-italics">.equipment @huntail777</p>
           <p class="bottom-header">Other Information</p>
           <ul>
-            <li>Includes your rod, line, and hook</li>
-            <li>The overall max weight is that of the weakest of your components</li>
+            <li>Upgrade your gear through the shop</li>
             <li>Also accepts <span class="command-highlight">.e</span></li>
           </ul>
         </div>
@@ -373,90 +177,56 @@
 
       <div class="command">
         <div class="top" onclick="expand(this)">
-          <p class="command-name">leaderboards</p>
-          <p class="description">Displays the server leaderboards</p>
+          <p class="command-name">fish</p>
+          <p class="description">Catch fish</p>
         </div>
         <div class="bottom">
           <hr>
           <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.leaderboards</p>
+          <p class="bottom-text">.fish [bait]</p>
+          <p class="bottom-italics">.fish</p>
+          <p class="bottom-italics">.fish worms</p>
           <p class="bottom-header">Other Information</p>
           <ul>
-            <li>Ranking is based on total weight caught</li>
-            <li>Also accepts <span class="command-highlight">.lb</span></li>
+            <li>Has a cooldown of about 1 hour</li>
+            <li>Also accepts <span class="command-highlight">.f</span></li>
           </ul>
         </div>
       </div>
 
       <div class="command">
         <div class="top" onclick="expand(this)">
-          <p class="command-name">fishleaderboards</p>
-          <p class="description">Displays global and server fish leaderboards</p>
+          <p class="command-name">help</p>
+          <p class="description">Access help guides</p>
         </div>
         <div class="bottom">
           <hr>
           <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.fishleaderboards [fish]</p>
+          <p class="bottom-text">.help [guide]</p>
+          <p class="bottom-italics">.help</p>
+          <p class="bottom-italics">.help weather</p>
           <p class="bottom-header">Other Information</p>
           <ul>
-            <li>Ranking is based on best caught fish of a species</li>
-            <li>Also accepts <span class="command-highlight">.flb</span></li>
+            <li>Type <span class="command-highlight">.help</span> to get a list of guides</li>
           </ul>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="category" id="information">
-      <div class="command">
-        <div class="top" onclick="expand(this)">
-          <p class="command-name">server</p>
-          <p class="description">Fetches the Official Big Tuna Server invite link</p>
-        </div>
-        <div class="bottom">
-          <hr>
-          <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.server</p>
         </div>
       </div>
 
       <div class="command">
         <div class="top" onclick="expand(this)">
           <p class="command-name">info</p>
-          <p class="description">Fetches command information</p>
+          <p class="description">View data on equipment, baits, and fish</p>
         </div>
         <div class="bottom">
           <hr>
           <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.info [command (optional)]</p>
+          <p class="bottom-text">.info [thing]</p>
           <p class="bottom-italics">.info</p>
-          <p class="bottom-italics">.info baitshop</p>
+          <p class="bottom-italics">.info baits</p>
+          <p class="bottom-italics">.info wooden rod</p>
           <p class="bottom-header">Other Information</p>
           <ul>
-            <li>Typing .info start will bring up a start guide</li>
-            <li>Also accepts <span class="command-highlight">.help</span></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="command">
-        <div class="top" onclick="expand(this)">
-          <p class="command-name">iteminfo</p>
-          <p class="description">Fetches item/bait information</p>
-        </div>
-        <div class="bottom">
-          <hr>
-          <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.iteminfo [item/bait]</p>
-          <p class="bottom-italics">.iteminfo leeches</p>
-          <p class="bottom-italics">.iteminfo wooden rod</p>
-          <p class="bottom-italics">.iteminfo grass line</p>
-          <p class="bottom-italics">.iteminfo rusty hook</p>
-          <p class="bottom-italics">.iteminfo standard aquarium</p>
-          <p class="bottom-italics">.iteminfo hooks</p>
-          <p class="bottom-header">Other Information</p>
-          <ul>
-            <li>Accepts <span class="command-highlight">baits</span>, <span class="command-highlight">rods</span>, <span class="command-highlight">lines</span>, and <span class="command-highlight">hooks</span> as parameters too</li>
+            <li>Type <span class="command-highlight">.info</span> for how to use</li>
             <li>Also accepts <span class="command-highlight">.ii</span></li>
           </ul>
         </div>
@@ -464,75 +234,534 @@
 
       <div class="command">
         <div class="top" onclick="expand(this)">
-          <p class="command-name">fishinfo</p>
-          <p class="description">Fetches information about a fish</p>
+          <p class="command-name">quickstart</p>
+          <p class="description">Access a quickstart guide</p>
         </div>
         <div class="bottom">
           <hr>
           <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.fishinfo [fish]</p>
-          <p class="bottom-italics">.fishinfo bluegill</p>
-          <p class="bottom-italics">.fishinfo rainbow trout</p>
+          <p class="bottom-text">.quickstart</p>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">location</p>
+          <p class="description">View data on a location</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.location &ltnumber&gt</p>
+          <p class="bottom-italics">.location 3</p>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">locations</p>
+          <p class="description">View all location data</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.locations</p>
           <p class="bottom-header">Other Information</p>
           <ul>
-            <li>Only works on fish from locations you have unlocked</li>
-            <li>Also accepts <span class="command-highlight">.fi</span></li>
+            <li>Same as <span class="command-highlight">.weather</span></li>
           </ul>
         </div>
       </div>
 
       <div class="command">
         <div class="top" onclick="expand(this)">
-          <p class="command-name">locationinfo</p>
-          <p class="description">Fetches information about a location</p>
+          <p class="command-name">setlocation</p>
+          <p class="description">Set your fishing location</p>
         </div>
         <div class="bottom">
           <hr>
           <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.locationinfo [number (optional)]</p>
-          <p class="bottom-italics">.locationinfo</p>
-          <p class="bottom-italics">.locationinfo 1</p>
-          <p class="bottom-italics">.locationinfo 3</p>
+          <p class="bottom-text">.setlocation &ltnumber&gt</p>
+          <p class="bottom-italics">.setlocation 2</p>
           <p class="bottom-header">Other Information</p>
           <ul>
-            <li>Also accepts <span class="command-highlight">.li</span></li>
+            <li>Also accepts <span class="command-highlight">.sl</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">shop</p>
+          <p class="description">Check the shop</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.shop</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>Lock Icon = level too low</li>
+            <li>Credit Card Icon = not enough coins</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">stats</p>
+          <p class="description">Check your stats</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.stats [user]</p>
+          <p class="bottom-italics">.stats</p>
+          <p class="bottom-italics">.stats @huntail777</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>Also accepts <span class="command-highlight">.s</span> or <span class="command-highlight">.stats player</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">stats server</p>
+          <p class="description">Check server stats</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.stats server</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>Weight caught only counts fish caught in the server</li>
+            <li>Also accepts <span class="command-highlight">.ss</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">stats global</p>
+          <p class="description">Check global stats</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.stats global</p>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">vote</p>
+          <p class="description">Vote for rewards</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.vote</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>Resets your fishing cooldown when you vote</li>
+            <li>Also accepts <span class="command-highlight">.v</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">weather</p>
+          <p class="description">View weather</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.weather</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>Same as <span class="command-highlight">.locations</span></li>
           </ul>
         </div>
       </div>
     </div>
 
 
-    <div class="category" id="clans">
+    <div class="category" id="advanced">
       <div class="command">
         <div class="top" onclick="expand(this)">
-          <p class="command-name">clan</p>
-          <p class="description">Shows your clan page</p>
+          <p class="command-name">bait</p>
+          <p class="description">Check your baits</p>
         </div>
         <div class="bottom">
           <hr>
           <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.clan</p>
+          <p class="bottom-text">.bait</p>
           <p class="bottom-header">Other Information</p>
           <ul>
-            <li>Green square means member last fished within a week</li>
-            <li>Yellow square means member last fished within 2 weeks</li>
-            <li>Red square means member last fished over 2 weeks ago</li>
+            <li>Also accepts <span class="command-highlight">.b</span></li>
           </ul>
         </div>
       </div>
 
       <div class="command">
         <div class="top" onclick="expand(this)">
-          <p class="command-name">members</p>
-          <p class="description">Shows your clan members page</p>
+          <p class="command-name">baitshop</p>
+          <p class="description">Check and purchase from the Bait Shop</p>
         </div>
         <div class="bottom">
           <hr>
           <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.members</p>
+          <p class="bottom-text">.baitshop</p>
           <p class="bottom-header">Other Information</p>
           <ul>
-            <li>Shows campaign catches for each member</li>
+            <li>New items appear in the bait shop every day</li>
+            <li>Also accepts <span class="command-highlight">.bs</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">bounty</p>
+          <p class="description">Check the weekly bounty</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.bounty</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>Bounty can only be caught once a week</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">card</p>
+          <p class="description">Check a card</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.card &ltid&gt [user]</p>
+          <p class="bottom-italics">.card 3</p>
+          <p class="bottom-italics">.card 3 @huntail777</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>Sell or redeem cards to your aquarium with buttons</li>
+            <li>Give cards with <span class="command-highlight">.give card</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">cards</p>
+          <p class="description">Check all cards</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.cards [user]</p>
+          <p class="bottom-italics">.cards</p>
+          <p class="bottom-italics">.cards @huntail777</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>Shows id for each of your cards</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">give card</p>
+          <p class="description">Give a card to another player</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.give card &ltid&gt &ltuser&gt</p>
+          <p class="bottom-italics">.give card 2 @huntail777</p>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">give ring</p>
+          <p class="description">Give a card to another player</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.give ring &ltid&gt &ltuser&gt</p>
+          <p class="bottom-italics">.give ring 4 @huntail777</p>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">give skin</p>
+          <p class="description">Give a skin to another player</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.give skin &ltid&gt &ltuser&gt</p>
+          <p class="bottom-italics">.give skin 1 @huntail777</p>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">give supporter</p>
+          <p class="description">Give Big Supporter to another player</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.give supporter &ltuser&gt</p>
+          <p class="bottom-italics">.give supporter @huntail777</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>You must have an extra copy of Big Supporter to use this command (see Big Tuna Shop)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">quest</p>
+          <p class="description">Check your quest</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.quest [user]</p>
+          <p class="bottom-italics">.quest</p>
+          <p class="bottom-italics">.quest @huntail777</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>Reset or claim rewards for your quest with buttons</li>
+            <li>Also accepts <span class="command-highlight">.q</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">ring</p>
+          <p class="description">Check a ring</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.ring &ltid&gt [user]</p>
+          <p class="bottom-italics">.ring 4</p>
+          <p class="bottom-italics">.ring 4 @huntail777</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>Sell or equip rings with buttons</li>
+            <li>Give rings with <span class="command-highlight">.give ring</span></li>
+            <li>Given rings have a sell price of 0 coins</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">rings</p>
+          <p class="description">Check all rings</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.rings [user]</p>
+          <p class="bottom-italics">.rings</p>
+          <p class="bottom-italics">.rings @huntail777</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>Shows id for each of your rings</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">servershop</p>
+          <p class="description">Check the premium Server Shop</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.servershop</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>Each server has a unique Server Shop</li>
+            <li>Refreshes once a week</li>
+            <li>A player may only claim from a specific server shop once per week</li>
+            <li>Only Premium Big Tuna Servers have a Server Shop (see Big Tuna Shop)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">skin</p>
+          <p class="description">Check a skin</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.skin &ltid&gt</p>
+          <p class="bottom-italics">.skin 4</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>Discard or equip skins with buttons</li>
+            <li>Give skins with <span class="command-highlight">.give skin</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">skins</p>
+          <p class="description">Check all skins</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.skins</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>Shows id for each of your skins</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="category" id="rankings">
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">fishleaderboards</p>
+          <p class="description">Fetches leaderboards for a specific fish</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.fishleaderboards &ltfish&gt</p>
+          <p class="bottom-italics">.fishleaderboards green sunfish</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>Also accepts <span class="command-highlight">.flb</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">leaderboards kg</p>
+          <p class="description">Fetches server leaderboards by weight caught</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.leaderboards kg</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>Also accepts <span class="command-highlight">.lb kg</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">leaderboards score</p>
+          <p class="description">Fetches server leaderboards by Fisher Score</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.leaderboards score</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>Also accepts <span class="command-highlight">.lb score</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">rankings</p>
+          <p class="description">Fetches global rankings by Fisher Score</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.rankings [user]</p>
+          <p class="bottom-italics">.rankings</p>
+          <p class="bottom-italics">.rankings @huntail777</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>Only available to Big Supporters (see Big Tuna Shop)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">scores</p>
+          <p class="description">Fetches global rankings and score breakdown for a location (Fisher Score)</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.scores &ltlocation&gt [user]</p>
+          <p class="bottom-italics">.scores 4</p>
+          <p class="bottom-italics">.scores 4 @huntail777</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="category" id="clan">
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">board</p>
+          <p class="description">Find clans to join</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.clan board</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>Random results for each use</li>
+            <li>Only clans without a password will appear</li>
+            <li>Only clans with less than 20 members will appear</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">buy</p>
+          <p class="description">Purchase perks from the clan shop</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.clan buy &ltupgrade&gt</p>
+          <p class="bottom-italics">.clan buy exp</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>Purchase with Clan Points</li>
+            <li>All clan members benefit from perks</li>
+            <li>Options can be viewed with <span class="command-highlight">.clan shop</span></li>
           </ul>
         </div>
       </div>
@@ -540,14 +769,17 @@
       <div class="command">
         <div class="top" onclick="expand(this)">
           <p class="command-name">campaign</p>
-          <p class="description">Shows the current campaign stage</p>
+          <p class="description">Check clan quests (campaigns)</p>
         </div>
         <div class="bottom">
           <hr>
           <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.campaign</p>
+          <p class="bottom-text">.clan campaign</p>
           <p class="bottom-header">Other Information</p>
           <ul>
+            <li>Earn Clan Points</li>
+            <li>All clan members get the Quest Point and coin rewards</li>
+            <li>Each clan member can contribute a maximum of 1 catch per day</li>
             <li>Also accepts <span class="command-highlight">.ca</span></li>
           </ul>
         </div>
@@ -556,37 +788,33 @@
       <div class="command">
         <div class="top" onclick="expand(this)">
           <p class="command-name">create</p>
-          <p class="description">Creates a fishing clan</p>
+          <p class="description">Create a clan</p>
         </div>
         <div class="bottom">
           <hr>
           <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.create</p>
+          <p class="bottom-text">.clan create &ltname&gt</p>
+          <p class="bottom-italics">.clan create My Clan</p>
           <p class="bottom-header">Other Information</p>
           <ul>
-            <li>Requires Lvl.20 or above</li>
             <li>Costs 5000 coins</li>
-            <li>Also accepts <span class="command-highlight">.createclan</span></li>
           </ul>
         </div>
       </div>
 
       <div class="command">
         <div class="top" onclick="expand(this)">
-          <p class="command-name">rename</p>
-          <p class="description">Rename your clan to something of your choosing</p>
+          <p class="command-name">demote</p>
+          <p class="description">Demote a clan member</p>
         </div>
         <div class="bottom">
           <hr>
           <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.rename [new name]</p>
-          <p class="bottom-italics">.rename The Big Fishers</p>
+          <p class="bottom-text">.clan demote &ltid&gt</p>
+          <p class="bottom-italics">.clan demote 4</p>
           <p class="bottom-header">Other Information</p>
           <ul>
-            <li>Maximum 32 characters</li>
-            <li>Must only use characters from the english alphabet</li>
-            <li>Cannot start or end with a space, or have 2 spaces in a row</li>
-            <li>Also accepts <span class="command-highlight">.renameclan</span></li>
+            <li>See clan member ids with <span class="command-highlight">.clan members</span></li>
           </ul>
         </div>
       </div>
@@ -599,119 +827,12 @@
         <div class="bottom">
           <hr>
           <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.join [Clan ID] [password (optional)]</p>
-          <p class="bottom-italics">.join 14</p>
-          <p class="bottom-italics">.join 73 xyslkg</p>
+          <p class="bottom-text">.clan join &ltclan id&gt [password]</p>
+          <p class="bottom-italics">.clan join 1</p>
+          <p class="bottom-italics">.clan join 7 GXYF</p>
           <p class="bottom-header">Other Information</p>
           <ul>
-            <li>No level requirement</li>
-            <li>Also accepts <span class="command-highlight">.joinclan</span></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="command">
-        <div class="top" onclick="expand(this)">
-          <p class="command-name">leave</p>
-          <p class="description">Leave a clan</p>
-        </div>
-        <div class="bottom">
-          <hr>
-          <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.leave</p>
-          <p class="bottom-header">Other Information</p>
-          <ul>
-            <li>Also accepts <span class="command-highlight">.leaveclan</span></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="command">
-        <div class="top" onclick="expand(this)">
-          <p class="command-name">password</p>
-          <p class="description">View clan password</p>
-        </div>
-        <div class="bottom">
-          <hr>
-          <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.password</p>
-          <p class="bottom-header">Other Information</p>
-          <ul>
-            <li>Only usable by Trusted Members and Leaders</li>
-            <li>Also accepts <span class="command-highlight">.pass</span></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="command">
-        <div class="top" onclick="expand(this)">
-          <p class="command-name">newpassword</p>
-          <p class="description">Generates a new clan password</p>
-        </div>
-        <div class="bottom">
-          <hr>
-          <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.newpassword</p>
-          <p class="bottom-header">Other Information</p>
-          <ul>
-            <li>Turns on the password feature if it was disabled</li>
-            <li>Only usable by Trusted Members and Leaders</li>
-            <li>Also accepts <span class="command-highlight">.newpass</span></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="command">
-        <div class="top" onclick="expand(this)">
-          <p class="command-name">nopassword</p>
-          <p class="description">Turns off passwords for your clan</p>
-        </div>
-        <div class="bottom">
-          <hr>
-          <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.nopassword</p>
-          <p class="bottom-header">Other Information</p>
-          <ul>
-            <li>Only usable by Trusted Members and Leaders</li>
-            <li>Also accepts <span class="command-highlight">.nopass</span></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="command">
-        <div class="top" onclick="expand(this)">
-          <p class="command-name">promote</p>
-          <p class="description">Promote players within a clan</p>
-        </div>
-        <div class="bottom">
-          <hr>
-          <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.promote [ping/username]</p>
-          <p class="bottom-italics">.promote @Huntail777#4311</p>
-          <p class="bottom-italics">.promote Huntail777#4311</p>
-          <p class="bottom-header">Other Information</p>
-          <ul>
-            <li>Only usable by Trusted Members and Leaders</li>
-            <li>Can be used to promote Trusted Members to Leaders</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="command">
-        <div class="top" onclick="expand(this)">
-          <p class="command-name">demote</p>
-          <p class="description">Demote players within a clan</p>
-        </div>
-        <div class="bottom">
-          <hr>
-          <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.demote [ping/username]</p>
-          <p class="bottom-italics">.demote @Huntail777#4311</p>
-          <p class="bottom-italics">.demote Huntail777#4311</p>
-          <p class="bottom-header">Other Information</p>
-          <ul>
-            <li>Only usable by Trusted Members and Leaders</li>
-            <li>Can be used to kick Members from a clan</li>
+            <li>Find clans to join with <span class="command-highlight">.clan board</span></li>
           </ul>
         </div>
       </div>
@@ -719,53 +840,188 @@
       <div class="command">
         <div class="top" onclick="expand(this)">
           <p class="command-name">kick</p>
-          <p class="description">Kick players from a clan</p>
+          <p class="description">Kick a clan member</p>
         </div>
         <div class="bottom">
           <hr>
           <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.kick [ping/username]</p>
-          <p class="bottom-italics">.kick @Huntail777#4311</p>
-          <p class="bottom-italics">.kick Huntail777#4311</p>
+          <p class="bottom-text">.clan kick &ltid&gt</p>
+          <p class="bottom-italics">.clan kick 4</p>
           <p class="bottom-header">Other Information</p>
           <ul>
-            <li>Only usable by Trusted Members and Leaders</li>
+            <li>See clan member ids with <span class="command-highlight">.clan members</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">members</p>
+          <p class="description">Check an overview of clan members</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.clan members</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>Shows member ids and campaign contributions</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">password check</p>
+          <p class="description">Privately check the clan password</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.clan password check</p>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">password disable</p>
+          <p class="description">Removes the password requirement to join your clan</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.clan password disable</p>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">password generate</p>
+          <p class="description">Generates a new password for your clan</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.clan password generate</p>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">perks</p>
+          <p class="description">Check clan perks</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.clan perks</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>Includes both perks from the clan shop and star perks</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">profile</p>
+          <p class="description">Check your clan profile</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.clan profile [user]</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>The names of members from other clans will not be shown unless they are opted in</li>
+            <li>Also accepts <span class="command-highlight">.clan</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">promote</p>
+          <p class="description">Promote a clan member</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.clan promote &ltid&gt</p>
+          <p class="bottom-italics">.clan promote 4</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>See clan member ids with <span class="command-highlight">.clan members</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">rename</p>
+          <p class="description">Rename your clan</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.clan rename &ltname&gt</p>
+          <p class="bottom-italics">.clan rename My New Name</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>Clans have a limited number of renames</li>
           </ul>
         </div>
       </div>
     </div>
 
-
-    <div class="category" id="mods">
+    <div class="category" id="special">
       <div class="command">
         <div class="top" onclick="expand(this)">
-          <p class="command-name">toggle</p>
-          <p class="description">Toggle various server settings</p>
+          <p class="command-name">opt in</p>
+          <p class="description">Make your stats accessible to other players</p>
         </div>
         <div class="bottom">
           <hr>
           <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.toggle [option]</p>
+          <p class="bottom-text">.opt in</p>
           <p class="bottom-header">Other Information</p>
           <ul>
-            <li><span class="command-highlight">.toggle startinfo</span> toggles whether members receive a message from Big Tuna when they join your server</li>
+            <li>Check status with <span class="command-highlight">.stats player</span></li>
+            <li>Other players will be able to view your equipment, aquariums, etc.</li>
           </ul>
         </div>
       </div>
 
       <div class="command">
         <div class="top" onclick="expand(this)">
-          <p class="command-name">setprefix</p>
-          <p class="description">Set the prefix for your server</p>
+          <p class="command-name">opt out</p>
+          <p class="description">Make your stats inaccessible to other players</p>
         </div>
         <div class="bottom">
           <hr>
           <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.setprefix [prefix]</p>
+          <p class="bottom-text">.opt out</p>
           <p class="bottom-header">Other Information</p>
           <ul>
-            <li>If you forget your prefix, ping Big Tuna</li>
-            <li>Your prefix must be one of: <span class="command-highlight">. ! ? , ~ ; f .. ?? !! f! t!</span></li>
+            <li>Check status with <span class="command-highlight">.stats player</span></li>
+            <li>Other players will not be able to view your equipment, aquariums, etc.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="command">
+        <div class="top" onclick="expand(this)">
+          <p class="command-name">redeem</p>
+          <p class="description">Gift a server the Premium Server perk</p>
+        </div>
+        <div class="bottom">
+          <hr>
+          <p class="bottom-header">Usage</p>
+          <p class="bottom-text">.opt out</p>
+          <p class="bottom-header">Other Information</p>
+          <ul>
+            <li>You must have purchased Premium Server to use this command (see Big Tuna Shop)</li>
+            <li>Check usability with <span class="command-highlight">.stats player</span></li>
           </ul>
         </div>
       </div>
@@ -773,57 +1029,35 @@
       <div class="command">
         <div class="top" onclick="expand(this)">
           <p class="command-name">setcustomfish</p>
-          <p class="description">Set a custom fish command for your server</p>
+          <p class="description">Set a custom word or phrase to trigger the fish command</p>
         </div>
         <div class="bottom">
           <hr>
           <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.setcustomfish [alias]</p>
-          <p class="bottom-italics">.setcustomfish potato</p>
-          <p class="bottom-italics">.setcustomfish 1</p>
+          <p class="bottom-text">.setcustomfish &ltphrase&gt</p>
+          <p class="bottom-text">.setcustomfish f</p>
+          <p class="bottom-text">.setcustomfish i love fishing</p>
           <p class="bottom-header">Other Information</p>
           <ul>
-            <li>Only usable once someone has used <span class="command-highlight">.redeem</span> in the server</li>
-            <li>Unlimited uses</li>
-            <li>Type <span class="command-highlight">.scf</span> to switch off the feature</li>
-            <li>Also accepts <span class="command-highlight">.scf</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="category" id="other">
-      <div class="command">
-        <div class="top" onclick="expand(this)">
-          <p class="command-name">redeem</p>
-          <p class="description">Redeem custom fish privileges to a server</p>
-        </div>
-        <div class="bottom">
-          <hr>
-          <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.redeem</p>
-          <p class="bottom-header">Other Information</p>
-          <ul>
-            <li>Your unused redeems will show up in <span class="command-highlight">.stats</span></li>
-            <li>Purchased from the Big Tuna Shop</li>
+            <li>Only moderators of Premium Servers may use this command (see Big Tuna Shop)</li>
+            <li>Check custom fish status with <span class="command-highlight">.stats server</span></li>
           </ul>
         </div>
       </div>
 
       <div class="command">
         <div class="top" onclick="expand(this)">
-          <p class="command-name">givepremium</p>
-          <p class="description">Give extra Big Supporter perks to other players</p>
+          <p class="command-name">updates</p>
+          <p class="description">View major updates for Big Tuna</p>
         </div>
         <div class="bottom">
           <hr>
           <p class="bottom-header">Usage</p>
-          <p class="bottom-text">.givepremium [@user]</p>
+          <p class="bottom-text">.updates</p>
           <p class="bottom-header">Other Information</p>
           <ul>
-            <li>Your unused supporter gifts will show up in <span class="command-highlight">.stats</span></li>
-            <li>Purchased from the Big Tuna Shop</li>
+            <li>May have useful information to help troubleshoot issues</li>
+            <li>Only updated for major updates</li>
           </ul>
         </div>
       </div>
@@ -851,7 +1085,7 @@
         <div class="columnText">
           <h3 class="footerTitle">Contact</h3>
           <p id="email">discordbigtuna@gmail.com</p>
-          <p id="discord">Huntail777#4311</p>
+          <p id="discord">huntail777#4311</p>
         </div>
       </div>
     </div>
