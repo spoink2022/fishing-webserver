@@ -53,84 +53,72 @@
 
   <div id="main">
     <h1 id="title">GETTING STARTED</h1>
-    <p id="subtitle">This guide is currently outdated. See in-game guides for current information.</p>
+    <p id="subtitle">A simple step-by-step guide covering the basics of the Big Tuna discord fishing bot.</p>
 
     <div class="section">
-      <h2 class="header">Inviting Big Tuna</h2>
-      <p class="text">If you already have Big Tuna in one of your servers, skip this step and head over to <a href="javascript: scrollToSection('help')">The Help Command.</a></p>
-      <p class="text">To invite Big Tuna, simply click <a href="https://discord.com/oauth2/authorize?client_id=803361191166607370&permissions=59456&scope=bot" target="_blank">here</a> and select a server. Note that you may only pick from servers that you have adequate permissions in.</p>
-      <p class="text">Ensure you allow Big Tuna all of the requested permissions.</p>
+      <h2 class="header">1. Inviting Big Tuna</h2>
+      <p class="text">Invite Big Tuna to a server with this <a href="https://discord.com/oauth2/authorize?client_id=803361191166607370&permissions=35904&scope=applications.commands%20bot" target="_blank">invite link</a>. Ensure you allow all of the requested permissions that Big Tuna requires to function properly.</p>
+      <p class="text">This same invite link can be found in Big Tuna’s discord profile, top.gg, or even elsewhere on this website.</p>
+    </div>
+
+    <div class="section" id="quickstart">
+      <h2 class="header">2. The Quickstart Command</h2>
+      <p class="text">Now with Big Tuna in your server, it's time to start using the bot!</p>
+      <p class="text">Type <span class="command">.quickstart</span> to pull up the in-game quickstart guide. The next few sections will cover the quickstart in more detail.</p>
       <picture>
-        <source srcset="../images/web/authorize.webp" type="image/webp">
-        <source srcset="../images/backup/authorize.jpg" type="image/jpeg">
-        <img class="image" src="../images/web/authorize.webp" alt="authorize">
+        <source srcset="../images/web/quickstart.webp" type="image/webp">
+        <source srcset="../images/backup/quickstart.jpg" type="image/jpeg">
+        <img class="image" src="../images/web/quickstart.webp" alt="info">
       </picture>
     </div>
 
-    <div class="section" id="help">
-      <h2 class="header">The Help Command</h2>
-      <p class="text">Now that you have Big Tuna in your server, it is time to set up a fishing account.</p>
-      <p class="text">Simply type <span class="command">.start</span> to create an account. You will then be directed to type <span class="command">.help 1</span> to bring up the help page.</p>
-      <p class="text">For more information regarding commands, you can visit our <a href="/commands">commands webpage</a> or type <span class="command">.cmd [command]</span> where [command] is the name of the command you want to know more about.</p>
-        <picture>
-          <source srcset="../images/web/info.webp" type="image/webp">
-          <source srcset="../images/backup/info.jpg" type="image/jpeg">
-          <img class="image" src="../images/web/info.webp" alt="info">
-        </picture>
-    </div>
-
     <div class="section">
-      <h2 class="header">Fishing</h2>
-      <p class="text">Enough talk, let’s get to the actual fishing component of the game.</p>
-      <p class="text">You fish by typing <span class="command">.fish</span>, which has a cooldown of 75 minutes. When you fish, you will first see a rendering of your environment. After a few seconds (or after clicking the hook icon), you will see the fish you caught. 
-        Keep in mind that the cooldown can be reset by using the <span class="command">.vote</span> command.</p>
-      <p class="text">When catching a fish, you will receive coins and exp. If you have not previously caught that species of fish, or if the fish is the biggest you’ve caught of that species, 
-        then it will go to your <a href="javascript: scrollToSection('aquarium')">aquarium.</a></p>
-      <p class="text">The tier that is associated with the fish you caught is solely based on the weight of the fish relative to that of its species. 
-        For example, a C-Tier blacktail shiner would weigh from 95g to 139g while a B-Tier blacktail shiner would weigh from 140g to 163g.</p>
+      <h2 class="header">3. Fishing</h2>
+      <p class="text">Catch fish by typing <span class="command">.fish</span>, which normally has a cooldown of 75 minutes depending on your rod. Until you reach level 10, there is NO COOLDOWN for fishing, so enjoy it while it lasts!</p>
+      <p class="text">Most features are restricted until reaching level 10 so you can get used to the game before diving into the more complex parts Big Tuna has to offer.</p>
+      <p class="text">Once you reach level 10, be sure to check out the <a href="/advanced">Advanced Guide</a> on this website to make sure you don’t miss anything!</p>
       <picture>
-        <source srcset="../images/web/caught_wide.webp" type="image/webp">
-        <source srcset="../images/backup/caught_wide.jpg" type="image/jpeg">
-        <img class="image" src="../images/web/caught_wide.webp" alt="catch">
+        <source srcset="../images/web/catch.webp" type="image/webp">
+        <source srcset="../images/backup/catch.jpg" type="image/jpeg">
+        <img class="image" src="../images/web/catch.webp" alt="catch">
       </picture>
     </div>
 
     <div class="section" id="aquarium">
-      <h2 class="header">Aquariums</h2>
-      <p class="text">An aquarium serves as both a place to view your most impressive catches and as a source of income. 
-        As you do not unlock the 2nd fishing location until level 10, you will only have access to one aquarium until then.</a></p>
-      <p class="text">Type <span class="command">.aquarium</span> to view your aquarium, and react with the coin icon to collect the money it has generated. 
-        Without any upgrades, the aquarium has a maximum coin capacity of 10. Alternatively, you can type <span class="command">.collect</span> to collect the coins in your aquarium.</p>
-      <p class="text">Coins per hour is determined by the fish in your aquarium. Each fish contributes a certain amount, which is dependent on both the tier and rarity of the fish.</p>
+      <h2 class="header">4. Aquariums</h2>
+      <p class="text">Aquariums serve as both a personal record book and as a source of income. Each location you unlock has an associated aquarium.</p>
+      <p class="text">Type <span class="command">.aquarium</span> to view your aquarium, and <span class="command">.collect</span> to collect earned coins. Without any upgrades, the aquarium has a maximum coin capacity of 10. Coins per hour is determined by the fish in your aquarium. </p>
+      <p class="text">The tier of a fish is simply how large the fish is compared to others of the same species. Tiers, from highest to lowest are SS, S, A, B, C, and D, although it would be very surprising for you to encounter an SS tier fish so early in the game.</p>
       <picture>
-        <source srcset="../images/web/aquarium_1.webp" type="image/webp">
-        <source srcset="../images/backup/aquarium_1.jpg" type="image/jpeg">
-        <img class="image" src="../images/web/aquarium_1.webp" alt="aquarium">
+        <source srcset="../images/web/aquarium.webp" type="image/webp">
+        <source srcset="../images/backup/aquarium.jpg" type="image/jpeg">
+        <img class="image" src="../images/web/aquarium.webp" alt="aquarium">
       </picture>
     </div>
 
     <div class="section">
-      <h2 class="header">Upgrading Your Equipment</h2>
-      <p class="text">If you’re particularly unlucky, you may have noticed that your line has snapped when you tried to fish. This is because the maximum weight of your equipment is less than the weight of that fish.</a></p>
-      <p class="text">In order to increase your maximum weight, you must upgrade your hook, line, and rod from the shop. To buy something, type <span class="command">.shop</span> and react with the icon number corresponding to the item you want to upgrade. 
-        Note that your maximum weight is the weakest one out of your hook, line, and rod.</p>
-      <p class="text">In the shop, you will also see the option to upgrade your aquarium. This will make your aquarium look nicer, increase revenue, and also increase coin capacity.</p>
-      <p class="text">Quick tip: always buy the aquarium upgrade when you can. It’s worth it.</p>
+      <h2 class="header">5. Upgrading Equipment</h2>
+      <p class="text">If you're particularly unlucky, you may have noticed that your line has snapped when you tried to fish. This is because the maximum weight of your equipment is less than the weight of that fish.</p>
+      <p class="text">In order to increase your maximum weight, you must upgrade your hook, line, and rod from the shop, accessible with <span class="command">.shop</span>. To buy something, use the <span class="command">.buy</span> command (instructions shown in the shop). Note that your maximum weight is the weakest one out of your hook, line, and rod.</p>
+      <p class="text">In the shop, you will also see the option to upgrade your aquarium. This will make your aquarium look nicer, increase coin generation, and also increase coin capacity.</p>
+      <p class="text">Quick tip: always buy the aquarium upgrade when you can. It's worth it.</p>
       <picture>
-        <source srcset="../images/web/shop.webp" type="image/webp">
-        <source srcset="../images/backup/shop.jpg" type="image/jpeg">
-        <img class="image" src="../images/web/shop.webp" alt="shop">
+        <source srcset="../images/web/equipment.webp" type="image/webp">
+        <source srcset="../images/backup/equipment.jpg" type="image/jpeg">
+        <img class="image" src="../images/web/equipment.webp" alt="shop">
       </picture>
     </div>
 
     <div class="section">
-      <h2 class="header">Other Useful Commands</h2>
-      <p class="text">There are a couple other useful commands that you can use before reaching level 10 that you should know about:</a></p>
-      <p class="text"><span class="command">.stats</span> - shows your personal stats</p>
-      <p class="text"><span class="command">.serverstats</span> - shows you your server’s stats</p>
-      <p class="text"><span class="command">.leaderboards</span> - shows your server’s leaderboards</p>
-      <p class="text"><span class="command">.server</span> - provides a link to the official Big Tuna server</p>
-      <p class="text">There is lots to learn about Big Tuna’s extensive gameplay, but with these basics and a little patience, you should be well on your way to becoming an experienced fisherman!</p>
+      <h2 class="header">6. Other Useful Commands</h2>
+      <p class="text">Fish, upgrade equipment, and repeat. You'll know you've reached level 10 when you suddenly have a cooldown for fishing.</p>
+      <p class="text">Some other commands you should take advantage of are:</p>
+      <p class="text"><span class="command">.help</span> - brings up a help menu</p>
+      <p class="text"><span class="command">.help all</span> - full command list</p>
+      <p class="text"><span class="command">.stats</span> - shows personal stats</p>
+      <p class="text"><span class="command">.stats @user</span> - view a friend's stats</p>
+      <p class="text"><span class="command">.leaderboards kg</span> - server leaderboards by weight caught</p>
+      <p class="text">There is a lot to experience with Big Tuna’s extensive gameplay. With these basics, we look forward to seeing you reach level 10, which is where your fishing journey really gets started!</p>
     </div>
   </div>
 
