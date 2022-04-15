@@ -200,7 +200,6 @@ async function fulfillOrder(session) {
     let qt = parseInt(purchase.split(':')[1]);
     await db.users.updateColumn(userid, PRODUCT_MAP[product], qt);
     await db.users.updateColumn(userid, PRODUCT_STAT_MAP[product], qt);
-    db.users.updateColumn(userid, dollars_spent, PRICE_MAP[product] * qt);
   }
 }
 
