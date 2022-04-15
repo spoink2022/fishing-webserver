@@ -177,6 +177,18 @@ const PRODUCT_MAP = {
   customFish: 'custom_fish'
 };
 
+const PRODUCT_STAT_MAP = {
+  oneDayHost: 'all_supporter',
+  oneWeekHost: 'all_big_supporter',
+  customFish: 'all_premium_server'
+}
+
+const PRICE_MAP = {
+  oneDayHost: 1.5,
+  oneWeekHost: 10,
+  customFish: 20
+}
+
 async function fulfillOrder(session) {
   let purchases = session.client_reference_id.split('&');
   console.log('Fulfilling order...', purchases);
@@ -187,6 +199,8 @@ async function fulfillOrder(session) {
     let product = purchase.split(':')[0];
     let qt = parseInt(purchase.split(':')[1]);
     await db.users.updateColumn(userid, PRODUCT_MAP[product], qt);
+    await db.users.updateColumn(userid, PRODUCT_STAT_MAP[product], qt);
+    db.users.updateColumn(userid, dollars_spent, PRICE_MAP[product] * qt);
   }
 }
 
