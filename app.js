@@ -137,6 +137,11 @@ app.get('/success', (req, res) => {
   res.render('success.ejs');
 });
 
+app.get('/suscheck', async (req, res) => {
+  const data = await db.fishLog.getTimestamps(req.query.userid);
+  res.send(data.map(t => `${Math.floor(t/86400)} ${String(Math.floor((t%86400)/3600)).padStart(2, '0')}:${String(Math.floor((t%3600)/60)).padStart(2, '0')}:${String(Math.floor(t%60)).padStart(2, '0')}`).join('<br>'));
+});
+
 // POST REQUESTS
 app.post('/create-checkout-session', async (req, res) => {
   if (!req.body.userid) {
