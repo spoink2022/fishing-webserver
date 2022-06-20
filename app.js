@@ -143,7 +143,6 @@ app.get('/suscheck', async (req, res) => {
 });
 
 function parseSuscheckData(data) {
-  console.log(data);
   return data.map((t, i) => {
     return `${Math.floor(t/86400)} ${String(Math.floor((t%86400)/3600)).padStart(2, '0')}:${String(Math.floor((t%3600)/60)).padStart(2, '0')}:${String(Math.floor(t%60)).padStart(2, '0')}\
      ${i === data.length-1 ? '' : `(+${Math.floor((t - data[i+1])/60)}:${(t-data[i+1])%60})`}`
