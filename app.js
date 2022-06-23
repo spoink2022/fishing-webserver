@@ -149,6 +149,64 @@ function parseSuscheckData(data) {
   }).join('<br>');
 }
 
+app.get('/globalsuscheck', async (req, res) => {
+  const data = await db.fishLog.getAllTimestamps();
+  const suspiciousUsers = await conductGlobalSuscheck(data, req.query.chainsize, req.query.tolerance);
+  res.send(
+    `${req.query.chainsize} Chain Size\
+    <br>${req.query.tolerance} Seconds Tolerance\
+    <br>${suspiciousUsers.length} Suspicious Accounts\
+    <br>${suspiciousUsers.map(userid => `<@${userid}>`).join('<br>')}`
+    );
+});
+
+async function conductGlobalSuscheck(data, CHAIN_SIZE, TOLERANCE) {
+  // Remove intervals of less than 30 minutes
+  let userid = data[data.length - 1].userid;
+  for (let i=data.length-1; i>0; i--) {
+    let entry = data[i];
+    if (entry.userid !== userid) {
+      userid = entry.userid;
+    } else {
+      if (entry.timestamp - data[i - 1].timestamp < 1800) {
+        data.splice(i, 1);
+      }
+    }
+  }
+  // Start
+  let suspiciousUsers = [];
+  userid = data[0].userid;
+  let suspicious = false;
+  let timestamps = [];
+  for (let entry of data) {
+    if (entry.userid !== userid) {
+      if (suspicious) {
+        suspiciousUsers.push(userid);
+      }
+      userid = entry.userid;
+      timestamps = [];
+      suspicious = false;
+    }
+
+    timestamps.unshift(entry.timestamp);
+    if (timestamps.length >= CHAIN_SIZE) {
+      let interval = timestamps[0] - timestamps[1];
+      let safe = false;
+      for (let i=1; i<CHAIN_SIZE-1; i++) {
+        //console.log(Math.abs((timestamps[i] - timestamps[i+1]) - interval));
+        if (Math.abs((timestamps[i] - timestamps[i+1]) - interval) > TOLERANCE) {
+          safe = true;
+          break;
+        }
+      }
+      if (!safe) {
+        suspicious = true;
+      }
+    }
+  }
+  return suspiciousUsers;
+}
+
 // POST REQUESTS
 app.post('/create-checkout-session', async (req, res) => {
   if (!req.body.userid) {
