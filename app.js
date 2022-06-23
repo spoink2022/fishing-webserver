@@ -173,6 +173,7 @@ async function conductGlobalSuscheck(data, CHAIN_SIZE, TOLERANCE) {
       }
     }
   }
+
   // Start
   let suspiciousUsers = [];
   userid = data[0].userid;

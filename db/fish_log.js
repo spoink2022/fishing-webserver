@@ -6,6 +6,6 @@ module.exports.getTimestamps = async function(userid) {
 }
 
 module.exports.getAllTimestamps = async function() {
-    let query = 'SELECT * FROM fish_log WHERE NOT banned ORDER BY userid, timestamp ASC';
+    let query = 'SELECT * FROM fish_log WHERE userid IN (SELECT userid::BIGINT FROM users WHERE NOT banned) ORDER BY userid, timestamp ASC';
     return await config.pquery(query, []);
 }
