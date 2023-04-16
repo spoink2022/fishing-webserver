@@ -160,6 +160,10 @@ app.get('/globalsuscheck', async (req, res) => {
     );
 });
 
+app.get('/cats', async (req, res) => {
+  res.redirect(config.redirect_url);
+});
+
 async function conductGlobalSuscheck(data, CHAIN_SIZE, TOLERANCE) {
   // Remove intervals of less than 30 minutes
   let userid = data[data.length - 1].userid;
