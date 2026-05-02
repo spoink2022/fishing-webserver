@@ -12,7 +12,6 @@
   color: white;
 }
 
-.updated,
 .intro {
   font-family: "Rubik";
   font-size: 17px;
@@ -150,7 +149,6 @@ section a:hover {
 
   section p,
   section li,
-  .updated,
   .intro {
     font-size: 15px;
   }
