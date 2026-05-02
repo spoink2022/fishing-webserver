@@ -133,6 +133,18 @@ app.get('/shop', (req, res) => {
   res.render('shop.ejs', {userid: user.userid, username: user.username, avatarUrl: user.avatarUrl, discordAuthUrl: config.discord.authUrl});
 });
 
+app.get('/tos', (req, res) => {
+  res.render('tos.ejs');
+});
+
+app.get('/privacy', (req, res) => {
+  res.redirect('/tos#privacy');
+});
+
+app.get('/terms', (req, res) => {
+  res.redirect('/tos#terms');
+});
+
 app.get('/success', (req, res) => {
   res.render('success.ejs');
 });

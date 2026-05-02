@@ -1,0 +1,157 @@
+#policy {
+  width: 760px;
+  margin: auto;
+  padding-top: 96px;
+}
+
+#policy h1 {
+  font-family: "Prompt";
+  font-size: 44px;
+  line-height: 1.15;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.updated,
+.intro {
+  font-family: "Rubik";
+  font-size: 17px;
+  line-height: 1.7;
+  color: #c4c4c4;
+}
+
+.intro {
+  margin-top: 12px;
+}
+
+.quickLinks {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.quickLinks a {
+  display: inline-block;
+  padding: 10px 14px;
+  border: 1px solid #21afff;
+  color: #21afff;
+  font-family: "Rubik";
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.quickLinks a:hover {
+  background-color: #21afff;
+  color: #20202A;
+}
+
+section {
+  padding-top: 52px;
+}
+
+section h2 {
+  display: inline-block;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #21afff;
+  font-family: "Rubik";
+  font-size: 34px;
+  font-weight: 500;
+}
+
+section h3 {
+  margin-top: 34px;
+  font-family: "Rubik";
+  font-size: 22px;
+  font-weight: 500;
+  color: #21afff;
+}
+
+section p,
+section li {
+  margin-top: 16px;
+  font-family: "Rubik";
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.75;
+  color: #efefef;
+}
+
+section ul {
+  margin-top: 14px;
+  margin-left: 26px;
+}
+
+section li {
+  margin-top: 8px;
+}
+
+section a {
+  color: #21afff;
+  text-decoration: none;
+}
+
+section a:hover {
+  text-decoration: underline;
+}
+
+#footerWrapper {
+  margin-top: 96px;
+}
+
+@media only screen and (max-width: 1024px) {
+  #policy {
+    width: 620px;
+    padding-top: 82px;
+  }
+
+  #policy h1 {
+    font-size: 38px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #policy {
+    width: calc(100% - 48px);
+    padding-top: 84px;
+  }
+
+  #policy h1 {
+    font-size: 34px;
+  }
+
+  section h2 {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  #policy {
+    width: calc(100% - 32px);
+    padding-top: 72px;
+  }
+
+  #policy h1 {
+    font-size: 30px;
+  }
+
+  .quickLinks a {
+    width: 100%;
+    text-align: center;
+  }
+
+  section h2 {
+    font-size: 26px;
+  }
+
+  section h3 {
+    font-size: 20px;
+  }
+
+  section p,
+  section li,
+  .updated,
+  .intro {
+    font-size: 15px;
+  }
+}

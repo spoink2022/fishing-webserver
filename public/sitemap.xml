@@ -100,4 +100,10 @@
         <image:title></image:title>
       </image:image>
   </url>
+  <url>
+    <loc>https://bigtuna.xyz/tos</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
 </urlset>
